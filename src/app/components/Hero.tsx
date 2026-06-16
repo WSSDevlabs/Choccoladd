@@ -18,6 +18,8 @@ export function Hero() {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
+        borderBottomLeftRadius: "3rem",
+        borderBottomRightRadius: "3rem",
       }}
     >
       {/* Gradient overlay — darker at top, lighter towards bottom */}
