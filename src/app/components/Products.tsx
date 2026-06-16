@@ -85,7 +85,7 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
 
 export function Products() {
   return (
-    <section id="products" className="py-24 bg-[#fdf6ee]">
+    <section id="products" className="py-24" style={{ background: "#F0DEC8" }}>
       <div className="max-w-7xl mx-auto px-6">
         {/* Section header */}
         <div className="text-center mb-16">
