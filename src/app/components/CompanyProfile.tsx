@@ -69,7 +69,7 @@ function PillarCard({ pillar, index }: { pillar: typeof pillars[0]; index: numbe
 
 export function CompanyProfile() {
   return (
-    <section className="py-24" style={{ background: "#1A0802" }}>
+    <section className="py-24" style={{ background: "#1A0802", borderRadius: "3rem" }}>
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}
