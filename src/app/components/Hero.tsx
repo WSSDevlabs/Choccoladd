@@ -20,8 +20,8 @@ export function Hero() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      {/* Dark overlay for text readability */}
-      <div className="absolute inset-0 bg-[#1A0802]/60 pointer-events-none" />
+      {/* Gradient overlay — darker at top, lighter towards bottom */}
+      <div className="absolute inset-0 pointer-events-none" style={{ background: "linear-gradient(to bottom, rgba(26,8,2,0.85) 0%, rgba(26,8,2,0.55) 50%, rgba(26,8,2,0.35) 100%)" }} />
       {/* Decorative glow circles — slow pulse */}
       <motion.div animate={{ scale: [1, 1.18, 1], opacity: [0.15, 0.07, 0.15] }} transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }} className="absolute top-20 right-10 w-80 h-80 rounded-full bg-[#C8A040]/15 blur-3xl pointer-events-none" />
       <motion.div animate={{ scale: [1, 1.22, 1], opacity: [0.10, 0.04, 0.10] }} transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }} className="absolute bottom-20 left-1/4 w-64 h-64 rounded-full bg-[#C8A040]/10 blur-2xl pointer-events-none" />
