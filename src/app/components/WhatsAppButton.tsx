@@ -64,7 +64,7 @@ export function WhatsAppButton() {
       </motion.button>
 
       {/* Pulse ring */}
-      <div className="absolute bottom-0 right-0 w-14 h-14 rounded-full animate-ping opacity-20" style={{ background: "#C8A040" }} />
+      <div className="absolute bottom-0 right-0 w-14 h-14 rounded-full animate-ping opacity-20 pointer-events-none" style={{ background: "#C8A040" }} />
     </div>
   );
 }
