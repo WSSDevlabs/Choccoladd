@@ -11,15 +11,25 @@ export function Contact() {
   const [form, setForm] = useState({ name: "", email: "", phone: "", subject: "", message: "" });
   const [sent, setSent] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const text = encodeURIComponent(
-      `Hi Choccoladd!\n\nName: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\nSubject: ${form.subject}\n\nMessage:\n${form.message}`
-    );
-    window.open(`https://wa.me/60196319373?text=${text}`, "_blank");
-    setSent(true);
-    setForm({ name: "", email: "", phone: "", subject: "", message: "" });
-    setTimeout(() => setSent(false), 4000);
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        access_key: "5bcb5a77-9fc0-4c50-b914-4f45440f99ea",
+        subject: form.subject || "New message from Choccoladd website",
+        from_name: form.name,
+        email: form.email,
+        phone: form.phone,
+        message: form.message,
+      }),
+    });
+    if (res.ok) {
+      setSent(true);
+      setForm({ name: "", email: "", phone: "", subject: "", message: "" });
+      setTimeout(() => setSent(false), 4000);
+    }
   };
 
   return (
