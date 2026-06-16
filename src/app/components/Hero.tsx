@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-const placeholderImage = "/images/placeholder.svg";
+const heroIcon = "/images/general/HeroIcon.webp";
 
 export function Hero() {
   const handleScroll = (href: string) => {
@@ -101,7 +101,7 @@ export function Hero() {
             <div className="absolute inset-0 rounded-full border border-[#C8A040]/30" />
             <div className="absolute inset-6 rounded-full border border-[#C8A040]/20" />
             <img
-              src={placeholderImage}
+              src={heroIcon}
               alt="Featured product"
               className="absolute inset-8 rounded-full w-[calc(100%-4rem)] h-[calc(100%-4rem)] object-cover"
             />
