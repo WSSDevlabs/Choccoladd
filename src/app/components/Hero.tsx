@@ -100,12 +100,35 @@ export function Hero() {
           className="hidden md:block relative"
         >
           <div className="relative w-full aspect-square max-w-md mx-auto">
-            <div className="absolute inset-0 rounded-full border border-[#C8A040]/30" />
-            <div className="absolute inset-6 rounded-full border border-[#C8A040]/20" />
+            {/* Outer pulsing glow ring */}
+            <motion.div
+              animate={{ scale: [1, 1.04, 1], opacity: [0.4, 0.15, 0.4] }}
+              transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute inset-0 rounded-full"
+              style={{ boxShadow: "0 0 40px 12px rgba(200,160,64,0.35)" }}
+            />
+            {/* Rotating gradient border */}
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+              className="absolute inset-0 rounded-full"
+              style={{
+                background: "conic-gradient(from 0deg, transparent 60%, #C8A040 80%, #fdf6ee 90%, #C8A040 100%, transparent 110%)",
+                padding: "2px",
+                borderRadius: "9999px",
+                WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                WebkitMaskComposite: "xor",
+                maskComposite: "exclude",
+              }}
+            />
+            {/* Static subtle inner ring */}
+            <div className="absolute inset-3 rounded-full border border-[#C8A040]/20" />
+            {/* Image */}
             <img
               src={heroIcon}
               alt="Featured product"
-              className="absolute inset-8 rounded-full w-[calc(100%-4rem)] h-[calc(100%-4rem)] object-cover"
+              className="absolute inset-5 rounded-full object-cover"
+              style={{ width: "calc(100% - 2.5rem)", height: "calc(100% - 2.5rem)" }}
             />
           </div>
           {/* Badge */}
