@@ -57,7 +57,7 @@ function GiftCard({ set }: { set: GiftSet }) {
         </span>
       </div>
 
-      <div className="p-6 flex flex-col flex-1">
+      <div className="p-3 sm:p-6 flex flex-col flex-1">
         <h3
           className="text-[#fdf6ee] mb-2"
           style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, fontSize: "1.15rem" }}
@@ -197,7 +197,7 @@ export default function AllGiftSetsPage() {
           </div>
 
           {/* Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-8">
             {displayed.map((set) => (
               <GiftCard key={set.id} set={set} />
             ))}
