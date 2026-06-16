@@ -50,7 +50,7 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
           </span>
         )}
       </div>
-      <div className="p-5 flex flex-col flex-1">
+      <div className="p-3 sm:p-5 flex flex-col flex-1">
         <h3
           className="text-[#2c1810] mb-1"
           style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, fontSize: "1rem" }}
@@ -105,7 +105,7 @@ export function Products() {
         </div>
 
         {/* Product grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
           {featuredProducts.map((product, i) => (
             <ProductCard key={product.id} product={product} index={i} />
           ))}
