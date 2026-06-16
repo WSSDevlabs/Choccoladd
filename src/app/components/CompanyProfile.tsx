@@ -107,44 +107,6 @@ export function CompanyProfile() {
           ))}
         </div>
 
-        {/* Bottom stat bar */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-12 grid grid-cols-2 md:grid-cols-4 rounded-2xl border border-[#C8A040]/20 overflow-hidden"
-          style={{ background: "rgba(44, 18, 6, 0.7)" }}
-        >
-          {[
-            { value: "Est.",   label: "June 2024" },
-            { value: "100%",   label: "Natural Cacao" },
-            { value: "2",      label: "Locations" },
-            { value: "MY",     label: "Made in Malaysia" },
-          ].map((stat, i) => (
-            <div
-              key={stat.label}
-              className={`px-8 py-7 text-center ${i < 3 ? "border-b md:border-b-0 md:border-r border-[#C8A040]/15" : "border-b md:border-b-0"}`}
-            >
-              <p
-                className="text-[#C8A040] mb-1"
-                style={{
-                  fontFamily: "'Playfair Display', serif",
-                  fontSize: "2rem",
-                  fontWeight: 700,
-                }}
-              >
-                {stat.value}
-              </p>
-              <p
-                className="text-[#fdf6ee]/40 text-xs uppercase tracking-widest"
-                style={{ fontFamily: "'DM Mono', monospace" }}
-              >
-                {stat.label}
-              </p>
-            </div>
-          ))}
-        </motion.div>
 
       </div>
     </section>
