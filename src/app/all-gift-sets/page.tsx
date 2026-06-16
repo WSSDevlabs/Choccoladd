@@ -130,7 +130,7 @@ export default function AllGiftSetsPage() {
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
       >
       <div className="min-h-screen pt-36 pb-20" style={{ background: "#1A0802" }}>
         <div className="max-w-7xl mx-auto px-6">

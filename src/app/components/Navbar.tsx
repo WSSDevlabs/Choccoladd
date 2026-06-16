@@ -113,7 +113,7 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
             className="md:hidden overflow-hidden bg-[#FAF4EA] border-t border-black/10 shadow-lg"
           >
             <div className="px-6 py-4 flex flex-col gap-4">
@@ -123,7 +123,7 @@ export function Navbar() {
                   href={link.href}
                   initial={{ opacity: 0, x: -16 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.25, delay: i * 0.06, ease: "easeOut" }}
+                  transition={{ duration: 0.35, delay: i * 0.1, ease: "easeOut" }}
                   onClick={(e) => { e.preventDefault(); handleLink(link.href); }}
                   className="text-[#1C0E06] py-2 border-b border-black/8 text-sm tracking-wide"
                   style={{ fontFamily: "'Lato', sans-serif" }}
@@ -135,7 +135,7 @@ export function Navbar() {
                 href="#contact"
                 initial={{ opacity: 0, x: -16 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.25, delay: navLinks.length * 0.06, ease: "easeOut" }}
+                transition={{ duration: 0.35, delay: navLinks.length * 0.1, ease: "easeOut" }}
                 onClick={(e) => { e.preventDefault(); handleLink("#contact"); }}
                 className="mt-1 px-5 py-3 bg-[#0A0402] text-[#FAF4EA] text-sm text-center uppercase tracking-widest hover:bg-[#C8A040] hover:text-[#0A0402] transition-colors duration-200"
                 style={{ fontFamily: "'Lato', sans-serif", fontWeight: 700 }}

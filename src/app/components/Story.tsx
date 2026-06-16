@@ -20,7 +20,7 @@ export function Story() {
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 1.0 }}
             className="relative pb-14 md:pb-8 pr-4 md:pr-0"
           >
             <div className="relative rounded-sm overflow-hidden aspect-[4/5] bg-[#ecddc8]">
@@ -62,7 +62,7 @@ export function Story() {
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 1.0 }}
             className="pb-8"
           >
             <p
@@ -98,7 +98,7 @@ export function Story() {
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: i * 0.1 }}
+                  transition={{ duration: 0.6, delay: i * 0.15 }}
                   className="flex items-start gap-4"
                 >
                   <span

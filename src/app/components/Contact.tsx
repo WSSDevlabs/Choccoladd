@@ -61,7 +61,7 @@ export function Contact() {
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.9 }}
             className="md:col-span-2 px-8 py-12 lg:px-12 lg:py-14 flex flex-col relative"
             style={{ background: "#1A0802" }}
           >
@@ -153,7 +153,7 @@ export function Contact() {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.9 }}
             className="md:col-span-3 px-8 py-12 lg:px-12 lg:py-14 bg-white"
           >
             <h3

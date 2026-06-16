@@ -30,7 +30,7 @@ function GiftSetCard({ set, index }: { set: GiftSet; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       whileHover={{ scale: 1.03, zIndex: 5 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.6, delay: index * 0.12, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.85, delay: index * 0.18, ease: [0.22, 1, 0.36, 1] }}
       style={{ transformPerspective: 900, rotateX, rotateY }}
       onMouseMove={(e) => {
         const rect = e.currentTarget.getBoundingClientRect();

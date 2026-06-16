@@ -25,7 +25,7 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       whileHover={{ scale: 1.03, zIndex: 5 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.85, delay: index * 0.15, ease: [0.22, 1, 0.36, 1] }}
       style={{ transformPerspective: 800, rotateX, rotateY }}
       onMouseMove={(e) => {
         const rect = e.currentTarget.getBoundingClientRect();

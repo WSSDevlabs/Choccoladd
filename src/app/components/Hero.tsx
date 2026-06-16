@@ -26,7 +26,7 @@ export function Hero() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.9 }}
             className="text-[#C8A040] mb-4 tracking-widest text-xs uppercase"
             style={{ fontFamily: "'DM Mono', monospace" }}
           >
@@ -36,7 +36,7 @@ export function Hero() {
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
+            transition={{ duration: 1.0, delay: 0.15 }}
             className="text-[#1C0E06] mb-6 leading-tight"
             style={{
               fontFamily: "'Playfair Display', serif",
@@ -53,7 +53,7 @@ export function Hero() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
+            transition={{ duration: 1.0, delay: 0.3 }}
             className="text-[#7A5430]/80 mb-10 max-w-md"
             style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300, fontSize: "1.1rem", lineHeight: 1.75 }}
           >
@@ -63,7 +63,7 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
+            transition={{ duration: 1.0, delay: 0.45 }}
             className="flex flex-wrap gap-4"
           >
             <button
@@ -87,7 +87,7 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 1.1, delay: 0.3 }}
           className="hidden md:block relative"
         >
           <div className="relative w-full aspect-square max-w-md mx-auto">
