@@ -8,7 +8,7 @@ import type { LucideIcon } from "lucide-react";
 
 const iconMap: Record<string, LucideIcon> = { Gift, Heart, Star, Package, Sparkles };
 
-const PREVIEW_COUNT = 3;
+const PREVIEW_COUNT = 4;
 
 type GiftSet = (typeof giftSets)[0];
 
@@ -116,7 +116,7 @@ export function GiftSets() {
         </div>
 
         {/* Cards — show first 3 only */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-8">
           {giftSets.slice(0, PREVIEW_COUNT).map((set, i) => (
             <GiftSetCard key={set.id} set={set} index={i} />
           ))}
