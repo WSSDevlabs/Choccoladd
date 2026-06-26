@@ -11,96 +11,127 @@ export type Product = {
 };
 
 export const products: Product[] = [
-  // ── COKLAT ──────────────────────────────────────────────────────────────
+  // ── CHOCOLATE ───────────────────────────────────────────────────────────
   {
     id: 1,
-    name: "Praline Coklat 80% Koko",
+    name: "80% Cocoa Chocolate Praline",
     price: "RM 10.00",
     description:
       "Handcrafted pralines made from premium 80% Malaysian cocoa. Rich, velvety and bold in every bite. 4 units per box, 40g each.",
-    image: placeholderImage,
+    image: "/images/products/Praline-chocolate-80.jpeg",
     tag: "Bestseller",
-    category: "Coklat",
+    category: "Chocolate",
   },
   {
     id: 2,
-    name: "Panning Coklat Almond",
+    name: "Panning Chocolates Almond, 40g",
     price: "RM 9.50",
     description:
       "Whole roasted almonds enrobed in smooth Choccoladd panning chocolate. A satisfying crunch wrapped in rich cocoa. 8 units per pack, 40g each.",
-    image: placeholderImage,
+    image: "/images/products/panning-almond-chocolates.jpeg",
     tag: "Popular",
-    category: "Coklat",
+    category: "Chocolate",
   },
-  // ── MINUMAN SACHET ────────────────────────────────────────────────────
   {
     id: 3,
-    name: "Minuman Koko Coklat Susu",
-    price: "RM 30.00",
-    description:
-      "A creamy, comforting cocoa milk drink made from real Malaysian cocoa. Simply add hot water and enjoy. 8 sachets per pack, 50g each.",
-    image: placeholderImage,
-    tag: null,
-    category: "Minuman Sachet",
-  },
-  {
-    id: 4,
-    name: "Minuman Teh Daun Koko",
-    price: "RM 18.50",
-    description:
-      "A distinctive tea crafted from sun-dried Malaysian cocoa leaves. Light, earthy and smooth with natural antioxidants. 12 sachets per pack, 38g each.",
-    image: placeholderImage,
-    tag: "New",
-    category: "Minuman Sachet",
-  },
-  {
-    id: 5,
-    name: "Praline Coklat 80% Koko (Gift Set)",
+    name: "80% Cocoa Chocolate Praline (Gift Set)",
     price: "RM 8.00",
     description:
       "Our signature 80% cocoa pralines, specially priced for gift set bundles. Same rich flavour, perfect for sharing and gifting. 4 units per box, 40g each.",
     image: placeholderImage,
     tag: "Gift Set",
-    category: "Coklat",
+    category: "Chocolate",
   },
   {
-    id: 6,
-    name: "Panning Coklat (Gift Set)",
+    id: 4,
+    name: "Panning Chocolate (Gift Set)",
     price: "RM 8.00",
     description:
       "Smooth panning chocolates specially priced for gift set pairings. A crowd-pleasing treat ideal for any occasion. 8 units per pack, 40g each.",
     image: placeholderImage,
     tag: "Gift Set",
-    category: "Coklat",
+    category: "Chocolate",
+  },
+  {
+    id: 5,
+    name: "Keto Coffee Chocolates, 80% Cocoa",
+    price: "RM 18.00",
+    description:
+      "Bold 80% cocoa chocolates infused with real coffee — a keto-friendly indulgence for dark chocolate and coffee lovers alike.",
+    image: "/images/products/keto-coffee-chocolates.jpeg",
+    tag: "Keto",
+    category: "Chocolate",
+  },
+  {
+    id: 6,
+    name: "Keto Chocolates Seasalt, 80% Cocoa",
+    price: "RM 18.00",
+    description:
+      "Rich 80% cocoa dark chocolates finished with a delicate touch of sea salt. Keto-friendly and intensely satisfying.",
+    image: placeholderImage,
+    tag: "Keto",
+    category: "Chocolate",
   },
   {
     id: 7,
-    name: "Minuman Koko Coklat Dgn Tongkat Ali",
-    price: "RM 35.00",
+    name: "Keto Prebiotic Chocolates",
+    price: "RM 18.00",
     description:
-      "Premium cocoa chocolate drink enriched with Tongkat Ali, a celebrated Malaysian herb known for natural energy and vitality. 8 sachets per pack, 50g each.",
-    image: placeholderImage,
-    tag: "Wellness",
-    category: "Minuman Sachet",
+      "Premium dark chocolates enriched with prebiotic fibre — crafted for gut health without compromising on flavour.",
+    image: "/images/products/keto-prebiotic-chocolates.jpeg",
+    tag: "Keto",
+    category: "Chocolate",
   },
+
+  // ── BEVERAGES ────────────────────────────────────────────────────────────
   {
     id: 8,
-    name: "Minuman Koko Coklat Dgn Kacip Fatimah",
-    price: "RM 35.00",
+    name: "Cocoa Milk Chocolate Drink",
+    price: "RM 30.00",
     description:
-      "Nourishing cocoa chocolate drink blended with Kacip Fatimah, a traditional Malaysian herb prized for women's wellness. 8 sachets per pack, 50g each.",
+      "A creamy, comforting cocoa milk drink made from real Malaysian cocoa. Simply add hot water and enjoy. 8 sachets per pack, 50g each.",
     image: placeholderImage,
-    tag: "Wellness",
-    category: "Minuman Sachet",
+    tag: null,
+    category: "Beverages",
   },
   {
     id: 9,
-    name: "Minuman Koko Coklat Dgn Gula Kelapa",
+    name: "Nafiyya Cocoa Leaf Tea",
+    price: "RM 18.90",
+    description:
+      "A distinctive tea crafted from sun-dried Malaysian cocoa leaves. Light, earthy and smooth with natural antioxidants. 12 sachets per pack, 38g each.",
+    image: "/images/products/nafiyya-cocoa-leaf-tea.jpeg",
+    tag: "New",
+    category: "Beverages",
+  },
+  {
+    id: 10,
+    name: "Cocoa With Coconut Sugar Drinks Powder, 8 Sachet",
     price: "RM 35.00",
     description:
       "Naturally sweetened cocoa chocolate drink made with coconut sugar for a wholesome, lower-GI indulgence with deep cocoa flavour. 8 sachets per pack, 50g each.",
-    image: placeholderImage,
+    image: "/images/products/cocoa-coconut-sugar-drink.jpeg",
     tag: null,
-    category: "Minuman Sachet",
+    category: "Beverages",
+  },
+  {
+    id: 11,
+    name: "Cocoa With Tongkat Ali Drinks Powder, 8 Sachet",
+    price: "RM 35.00",
+    description:
+      "Premium cocoa drink enriched with Tongkat Ali, a celebrated Malaysian herb known for natural energy and vitality. 8 sachets per pack, 50g each.",
+    image: "/images/products/cocoa-tongkat-ali-drink.jpeg",
+    tag: "Wellness",
+    category: "Beverages",
+  },
+  {
+    id: 12,
+    name: "Cocoa With Kacip Fatimah Drinks Powder, 8 Sachet",
+    price: "RM 35.00",
+    description:
+      "Nourishing cocoa drink blended with Kacip Fatimah, a traditional Malaysian herb prized for women's wellness. 8 sachets per pack, 50g each.",
+    image: "/images/products/cocoa-kacip-fatimah-drink.jpeg",
+    tag: "Wellness",
+    category: "Beverages",
   },
 ];

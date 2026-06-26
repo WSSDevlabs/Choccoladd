@@ -5,6 +5,7 @@ import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { Products } from "./components/Products";
 import { GiftSets } from "./components/GiftSets";
+import { InStoreExclusive } from "./components/InStoreExclusive";
 import { Story } from "./components/Story";
 import { CompanyProfile } from "./components/CompanyProfile";
 import { Contact } from "./components/Contact";
@@ -32,6 +33,7 @@ export default function App() {
       <Hero />
       <Products />
       <GiftSets />
+      <InStoreExclusive />
       <Story />
       <CompanyProfile />
       <Contact />

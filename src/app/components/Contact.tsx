@@ -33,7 +33,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24" style={{ background: "#F0DEC8" }}>
+    <section id="contact" className="py-24" style={{ background: "#FAF4EA" }}>
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Section header */}

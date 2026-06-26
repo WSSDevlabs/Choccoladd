@@ -7,9 +7,10 @@ import { motion, AnimatePresence } from "motion/react";
 
 const navLinks = [
   { label: "Home", href: "#home" },
-  { label: "Our Products", href: "#products" },
-  { label: "Gift Sets", href: "#gift-sets" },
+  { label: "Our Products", href: "/all-products", isPage: true },
+  { label: "Gift Sets", href: "/all-gift-sets", isPage: true },
   { label: "Our Story", href: "#story" },
+  { label: "Non-Food", href: "/all-non-food", isPage: true },
 ];
 
 export function Navbar() {
@@ -25,9 +26,11 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleLink = (href: string) => {
+  const handleLink = (href: string, isPage?: boolean) => {
     setIsOpen(false);
-    if (isHome) {
+    if (isPage) {
+      router.push(href);
+    } else if (isHome) {
       const el = document.querySelector(href);
       if (el) el.scrollIntoView({ behavior: "smooth" });
     } else {
@@ -74,7 +77,7 @@ export function Navbar() {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  onClick={(e) => { e.preventDefault(); handleLink(link.href); }}
+                  onClick={(e) => { e.preventDefault(); handleLink(link.href, link.isPage); }}
                   className="text-[#1C0E06]/70 hover:text-[#C8A040] transition-colors duration-200 text-sm tracking-wide"
                   style={{ fontFamily: "'Lato', sans-serif", fontWeight: 400, letterSpacing: "0.06em" }}
                 >
@@ -124,7 +127,7 @@ export function Navbar() {
                   initial={{ opacity: 0, x: -16 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.35, delay: i * 0.1, ease: "easeOut" }}
-                  onClick={(e) => { e.preventDefault(); handleLink(link.href); }}
+                  onClick={(e) => { e.preventDefault(); handleLink(link.href, link.isPage); }}
                   className="text-[#1C0E06] py-2 border-b border-black/8 text-sm tracking-wide"
                   style={{ fontFamily: "'Lato', sans-serif" }}
                 >

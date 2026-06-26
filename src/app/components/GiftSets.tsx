@@ -44,7 +44,7 @@ function GiftSetCard({ set, index }: { set: GiftSet; index: number }) {
         <img
           src={set.image}
           alt={set.name}
-          className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700"
+          className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#2c1810]/60 to-transparent" />
         <div
