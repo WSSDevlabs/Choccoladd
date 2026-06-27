@@ -1,4 +1,4 @@
-const placeholderImage = "/images/placeholder.svg";
+﻿const placeholderImage = "/images/placeholder.svg";
 
 export type Product = {
   id: number;
@@ -11,14 +11,14 @@ export type Product = {
 };
 
 export const products: Product[] = [
-  // ── CHOCOLATE ───────────────────────────────────────────────────────────
+  // â”€â”€ CHOCOLATE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   {
     id: 1,
     name: "80% Cocoa Chocolate Praline",
     price: "RM 10.00",
     description:
       "Handcrafted pralines made from premium 80% Malaysian cocoa. Rich, velvety and bold in every bite. 4 units per box, 40g each.",
-    image: "/images/products/Praline-chocolate-80.jpeg",
+    image: "/images/products/Praline-chocolate-80.jpg",
     tag: "Bestseller",
     category: "Chocolate",
   },
@@ -28,7 +28,7 @@ export const products: Product[] = [
     price: "RM 9.50",
     description:
       "Whole roasted almonds enrobed in smooth Choccoladd panning chocolate. A satisfying crunch wrapped in rich cocoa. 8 units per pack, 40g each.",
-    image: "/images/products/panning-almond-chocolates.jpeg",
+    image: "/images/products/panning-almond-chocolates.jpg",
     tag: "Popular",
     category: "Chocolate",
   },
@@ -57,8 +57,8 @@ export const products: Product[] = [
     name: "Keto Coffee Chocolates, 80% Cocoa",
     price: "RM 18.00",
     description:
-      "Bold 80% cocoa chocolates infused with real coffee — a keto-friendly indulgence for dark chocolate and coffee lovers alike.",
-    image: "/images/products/keto-coffee-chocolates.jpeg",
+      "Bold 80% cocoa chocolates infused with real coffee â€” a keto-friendly indulgence for dark chocolate and coffee lovers alike.",
+    image: "/images/products/keto-coffee-chocolates.jpg",
     tag: "Keto",
     category: "Chocolate",
   },
@@ -77,13 +77,13 @@ export const products: Product[] = [
     name: "Keto Prebiotic Chocolates",
     price: "RM 18.00",
     description:
-      "Premium dark chocolates enriched with prebiotic fibre — crafted for gut health without compromising on flavour.",
-    image: "/images/products/keto-prebiotic-chocolates.jpeg",
+      "Premium dark chocolates enriched with prebiotic fibre â€” crafted for gut health without compromising on flavour.",
+    image: "/images/products/keto-prebiotic-chocolates.jpg",
     tag: "Keto",
     category: "Chocolate",
   },
 
-  // ── BEVERAGES ────────────────────────────────────────────────────────────
+  // â”€â”€ BEVERAGES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   {
     id: 8,
     name: "Cocoa Milk Chocolate Drink",
@@ -100,7 +100,7 @@ export const products: Product[] = [
     price: "RM 18.90",
     description:
       "A distinctive tea crafted from sun-dried Malaysian cocoa leaves. Light, earthy and smooth with natural antioxidants. 12 sachets per pack, 38g each.",
-    image: "/images/products/nafiyya-cocoa-leaf-tea.jpeg",
+    image: "/images/products/nafiyya-cocoa-leaf-tea.jpg",
     tag: "New",
     category: "Beverages",
   },
@@ -110,7 +110,7 @@ export const products: Product[] = [
     price: "RM 35.00",
     description:
       "Naturally sweetened cocoa chocolate drink made with coconut sugar for a wholesome, lower-GI indulgence with deep cocoa flavour. 8 sachets per pack, 50g each.",
-    image: "/images/products/cocoa-coconut-sugar-drink.jpeg",
+    image: "/images/products/cocoa-coconut-sugar-drink.jpg",
     tag: null,
     category: "Beverages",
   },
@@ -120,7 +120,7 @@ export const products: Product[] = [
     price: "RM 35.00",
     description:
       "Premium cocoa drink enriched with Tongkat Ali, a celebrated Malaysian herb known for natural energy and vitality. 8 sachets per pack, 50g each.",
-    image: "/images/products/cocoa-tongkat-ali-drink.jpeg",
+    image: "/images/products/cocoa-tongkat-ali-drink.jpg",
     tag: "Wellness",
     category: "Beverages",
   },
@@ -130,8 +130,9 @@ export const products: Product[] = [
     price: "RM 35.00",
     description:
       "Nourishing cocoa drink blended with Kacip Fatimah, a traditional Malaysian herb prized for women's wellness. 8 sachets per pack, 50g each.",
-    image: "/images/products/cocoa-kacip-fatimah-drink.jpeg",
+    image: "/images/products/cocoa-kacip-fatimah-drink.jpg",
     tag: "Wellness",
     category: "Beverages",
   },
 ];
+

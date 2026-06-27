@@ -1,4 +1,4 @@
-export type GiftSet = {
+﻿export type GiftSet = {
   id: number;
   name: string;
   price: string;
@@ -18,7 +18,7 @@ export const giftSets: GiftSet[] = [
     description:
       "A grand curated set featuring all types of Choccoladd products. Fully customizable to suit any occasion or recipient.",
     includes: ["All Product Types", "Fully Customized", "Custom Packaging", "Premium Presentation"],
-    image: "/images/gift-sets/cocoa-grand-gift-set.jpeg",
+    image: "/images/gift-sets/cocoa-grand-gift-set.jpg",
     icon: "Package",
     accent: "#C8A040",
     occasion: "All Occasions",
@@ -30,7 +30,7 @@ export const giftSets: GiftSet[] = [
     description:
       "A thoughtful gift set perfect for birthdays, anniversaries, and congratulations. Tailored with love for someone special.",
     includes: ["Birthday", "Anniversary", "Congratulations", "Custom Message"],
-    image: "/images/gift-sets/gifts-for-her-his.jpeg",
+    image: "/images/gift-sets/gifts-for-her-his.jpg",
     icon: "Heart",
     accent: "#c4504a",
     occasion: "Personal",
@@ -42,7 +42,7 @@ export const giftSets: GiftSet[] = [
     description:
       "Elegant corporate gift sets ideal for clients, partners, and business events. Bulk orders and branded packaging available.",
     includes: ["Bulk Orders Available", "Branded Packaging", "Custom Selection", "Business Occasions"],
-    image: "/images/gift-sets/corporate-business-gift-set.jpeg",
+    image: "/images/gift-sets/corporate-business-gift-set.jpg",
     icon: "Star",
     accent: "#C8A040",
     occasion: "Corporate",
@@ -52,11 +52,12 @@ export const giftSets: GiftSet[] = [
     name: "Goodies (Praline Chocolates 80% Cocoa)",
     price: "RM 2.00 / pcs",
     description:
-      "Individually priced 80% cocoa praline chocolates — perfect as event goodies, door gifts, or add-ons to any gift set.",
+      "Individually priced 80% cocoa praline chocolates â€” perfect as event goodies, door gifts, or add-ons to any gift set.",
     includes: ["80% Cocoa Pralines", "Priced Per Piece", "Event & Door Gifts", "Minimum Order Applies"],
-    image: "/images/gift-sets/goodies-praline-chocolates.jpeg",
+    image: "/images/gift-sets/goodies-praline-chocolates.jpg",
     icon: "Gift",
     accent: "#C8A040",
     occasion: "Events",
   },
 ];
+

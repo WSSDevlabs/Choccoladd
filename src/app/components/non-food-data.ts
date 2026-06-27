@@ -1,4 +1,4 @@
-export type NonFoodProduct = {
+﻿export type NonFoodProduct = {
   id: number;
   name: string;
   price: string;
@@ -9,14 +9,14 @@ export type NonFoodProduct = {
 };
 
 export const nonFoodProducts: NonFoodProduct[] = [
-  // ── SKINCARE ─────────────────────────────────────────────────────────────
+  // â”€â”€ SKINCARE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   {
     id: 1,
     name: "Facial Foam",
     price: "RM 55.00",
     description:
       "A gentle daily facial foam infused with natural cocoa extracts. Deeply cleanses while nourishing the skin for a soft, radiant complexion.",
-    image: "/images/NonFood/facial-foam.jpeg",
+    image: "/images/NonFood/facial-foam.jpg",
     tag: null,
     category: "Skincare",
   },
@@ -26,7 +26,7 @@ export const nonFoodProducts: NonFoodProduct[] = [
     price: "RM 52.00",
     description:
       "A lightweight cocoa-based facial serum packed with antioxidants to brighten, firm, and revitalise the skin with every drop.",
-    image: "/images/NonFood/facial-serum.jpeg",
+    image: "/images/NonFood/facial-serum.jpg",
     tag: null,
     category: "Skincare",
   },
@@ -36,7 +36,7 @@ export const nonFoodProducts: NonFoodProduct[] = [
     price: "RM 45.00",
     description:
       "A hydrating day cream enriched with cocoa butter to protect and moisturise the skin throughout the day.",
-    image: "/images/NonFood/day-cream.jpeg",
+    image: "/images/NonFood/day-cream.jpg",
     tag: null,
     category: "Skincare",
   },
@@ -46,7 +46,7 @@ export const nonFoodProducts: NonFoodProduct[] = [
     price: "RM 45.00",
     description:
       "A nourishing overnight cream with cocoa extracts that works while you sleep to restore and rejuvenate your skin.",
-    image: "/images/NonFood/night-cream.jpeg",
+    image: "/images/NonFood/night-cream.jpg",
     tag: null,
     category: "Skincare",
   },
@@ -55,21 +55,22 @@ export const nonFoodProducts: NonFoodProduct[] = [
     name: "Cocoa Skincare Set",
     price: "RM 250.00",
     description:
-      "The complete Choccoladd skincare routine — Facial Foam, Day Cream, Night Cream, and Facial Serum bundled together at a special set price.",
-    image: "/images/NonFood/cocoa-skincare-set.jpeg",
+      "The complete Choccoladd skincare routine â€” Facial Foam, Day Cream, Night Cream, and Facial Serum bundled together at a special set price.",
+    image: "/images/NonFood/cocoa-skincare-set.jpg",
     tag: "Bundle",
     category: "Skincare",
   },
 
-  // ── ORAL CARE ─────────────────────────────────────────────────────────────
+  // â”€â”€ ORAL CARE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   {
     id: 6,
     name: "Mismis Cocoa Toothpaste",
     price: "RM 12.90",
     description:
       "A natural cocoa-infused toothpaste that gently whitens and freshens breath while keeping your enamel strong and healthy.",
-    image: "/images/NonFood/mismis-cocoa-toothpaste.jpeg",
+    image: "/images/NonFood/mismis-cocoa-toothpaste.jpg",
     tag: null,
     category: "Oral Care",
   },
 ];
+

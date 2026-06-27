@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "motion/react";
 
@@ -8,7 +8,7 @@ const exclusiveItems = [
     name: "Chocolate Shakes",
     subtitle: null,
     variants: [] as string[],
-    image: "/images/InStore/chocolate-shakes.jpeg",
+    image: "/images/InStore/chocolate-shakes.jpg",
     description: "Rich, indulgent chocolate milkshakes blended with our premium house chocolate.",
   },
   {
@@ -16,7 +16,7 @@ const exclusiveItems = [
     name: "Sandwiches",
     subtitle: "24pcs / Box",
     variants: ["Tuna", "Egg Mayo"],
-    image: "/images/InStore/sandwiches.jpeg",
+    image: "/images/InStore/sandwiches.jpg",
     description: "",
   },
 ];
@@ -118,3 +118,4 @@ export function InStoreExclusive() {
     </section>
   );
 }
+
