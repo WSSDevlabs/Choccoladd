@@ -42,6 +42,16 @@ export const products: Product[] = [
   },
   {
     id: 4,
+    name: "Keto Chocolates Seasalt, 80% Cocoa",
+    price: "RM 18.00",
+    description:
+      "Rich 80% cocoa dark chocolates finished with a delicate touch of sea salt. Keto-friendly and intensely satisfying.",
+    image: "/images/products/keto-seasalt-chocolates.jpg",
+    tag: "Keto",
+    category: "Chocolate",
+  },
+  {
+    id: 5,
     name: "Keto Prebiotic Chocolates",
     price: "RM 18.00",
     description:
@@ -53,7 +63,17 @@ export const products: Product[] = [
 
   // ── BEVERAGES ────────────────────────────────────────────────────────────
   {
-    id: 5,
+    id: 6,
+    name: "Cocoa Milk Chocolate Drink",
+    price: "RM 30.00",
+    description:
+      "A creamy, comforting cocoa milk drink made from real Malaysian cocoa. Simply add hot water and enjoy. 8 sachets per pack, 50g each.",
+    image: "/images/products/cocoa-milk-chocolate-drink.jpg",
+    tag: null,
+    category: "Beverages",
+  },
+  {
+    id: 7,
     name: "Nafiyya Cocoa Leaf Tea",
     price: "RM 18.90",
     description:
@@ -63,7 +83,7 @@ export const products: Product[] = [
     category: "Beverages",
   },
   {
-    id: 6,
+    id: 8,
     name: "Cocoa With Coconut Sugar Drinks Powder, 8 Sachet",
     price: "RM 35.00",
     description:
@@ -73,7 +93,7 @@ export const products: Product[] = [
     category: "Beverages",
   },
   {
-    id: 7,
+    id: 9,
     name: "Cocoa With Tongkat Ali Drinks Powder, 8 Sachet",
     price: "RM 35.00",
     description:
@@ -83,7 +103,7 @@ export const products: Product[] = [
     category: "Beverages",
   },
   {
-    id: 8,
+    id: 10,
     name: "Cocoa With Kacip Fatimah Drinks Powder, 8 Sachet",
     price: "RM 35.00",
     description:
