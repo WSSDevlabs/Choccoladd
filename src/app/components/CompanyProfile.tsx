@@ -11,16 +11,16 @@ const pillars = [
     body: "Newbox Greens Ventures (Reg. No. 202403155455) was established on 11th June 2024 in Kuala Lumpur, Malaysia. Operating under the brand Choccoladd, we produce, process, market, and sell cocoa-derived food ingredients and cocoa products such as cocoa cake, butter, powder, liquor, and mass, serving customers in Malaysia and internationally. We are proud to collaborate with Lembaga Koko Malaysia (Malaysian Cocoa Board), upholding the highest standards in cocoa quality and sustainable practices.",
   },
   {
-    icon: Eye,
-    label: "02",
-    title: "Our Vision",
-    body: "To become the preferred cocoa and its derivatives company and partner in the world.",
-  },
-  {
     icon: Target,
-    label: "03",
+    label: "02",
     title: "Our Mission",
     body: "To constantly R&D and innovate cocoa plantation outputs in Malaysia into new derivative end products. To create a sustainable cocoa supply chain from farm to fork. To form strong alliances with local partners, dedicated to serving our customers worldwide and growing together in long-term partnership.",
+  },
+  {
+    icon: Eye,
+    label: "03",
+    title: "Our Vision",
+    body: "To become the preferred cocoa and its derivatives company and partner in the world.",
   },
 ];
 

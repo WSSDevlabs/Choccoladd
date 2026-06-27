@@ -77,14 +77,14 @@ export function Hero() {
           >
             <button
               onClick={() => handleScroll("#products")}
-              className="px-8 py-3 bg-[#0A0402] text-[#FAF4EA] hover:bg-[#C8A040] hover:text-[#0A0402] transition-colors duration-200 text-sm tracking-widest uppercase"
+              className="btn-ltr px-8 py-3 text-[#FAF4EA] text-sm tracking-widest uppercase"
               style={{ fontFamily: "'Lato', sans-serif", fontWeight: 700 }}
             >
               Shop Now
             </button>
             <button
               onClick={() => handleScroll("#story")}
-              className="px-8 py-3 border border-[#fdf6ee]/40 text-[#fdf6ee] hover:border-[#C8A040] hover:text-[#C8A040] transition-colors duration-200 text-sm tracking-widest uppercase"
+              className="btn-border-ltr px-8 py-3 border border-[#fdf6ee]/40 text-[#fdf6ee] text-sm tracking-widest uppercase"
               style={{ fontFamily: "'Lato', sans-serif", fontWeight: 400 }}
             >
               Our Story

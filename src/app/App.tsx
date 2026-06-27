@@ -31,13 +31,13 @@ export default function App() {
     >
       <Navbar />
       <Hero />
+      <Story />
+      <CompanyProfile />
       <Products />
       <GiftSets />
       <InStoreExclusive />
-      <Story />
-      <CompanyProfile />
-      <Contact />
       <LocationMap />
+      <Contact />
       <Footer />
       <WhatsAppButton />
     </div>

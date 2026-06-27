@@ -59,7 +59,7 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
           </span>
           <button
             onClick={handleWhatsApp}
-            className="px-4 py-2 bg-[#0A0402] text-[#fdf6ee] text-xs uppercase tracking-wider hover:bg-[#C8A040] transition-colors duration-200"
+            className="btn-btt px-4 py-2 text-[#fdf6ee] text-xs uppercase tracking-wider"
             style={{ fontFamily: "'Lato', sans-serif", fontWeight: 700 }}
           >
             Order
@@ -99,7 +99,7 @@ export function Products() {
         <div className="mt-12 text-center">
           <Link
             href="/all-products"
-            className="inline-flex items-center justify-center px-8 py-3 bg-[#0A0402] text-[#FAF4EA] text-sm uppercase tracking-widest hover:bg-[#C8A040] hover:text-[#0A0402] transition-colors duration-200"
+            className="inline-flex items-center justify-center px-8 py-3 bg-[#0A0402] text-[#FAF4EA] text-sm uppercase tracking-widest hover:bg-[#C8A040] hover:text-[#0A0402] transition-colors duration-300"
             style={{ fontFamily: "'Lato', sans-serif", fontWeight: 700 }}
           >
             View All Products

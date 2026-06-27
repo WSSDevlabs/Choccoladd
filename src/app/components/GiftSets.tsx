@@ -84,7 +84,7 @@ function GiftSetCard({ set, index }: { set: GiftSet; index: number }) {
           </span>
           <button
             onClick={handleWhatsApp}
-            className="w-full py-2.5 text-xs uppercase tracking-widest text-[#fdf6ee] hover:opacity-85 transition-opacity"
+            className="btn-glow w-full py-2.5 text-xs uppercase tracking-widest text-[#fdf6ee]"
             style={{ background: set.accent, fontFamily: "'Lato', sans-serif", fontWeight: 700 }}
           >
             Order Gift
@@ -135,7 +135,7 @@ export function GiftSets() {
         <div className="text-center mt-12">
           <button
             onClick={() => router.push("/all-gift-sets")}
-            className="inline-block px-10 py-3.5 border border-[#C8A040] text-[#C8A040] text-xs uppercase tracking-widest hover:bg-[#C8A040] hover:text-[#2c1810] transition-all duration-200"
+            className="inline-block px-10 py-3.5 border border-[#C8A040] text-[#C8A040] text-xs uppercase tracking-widest hover:bg-[#C8A040] hover:text-[#2c1810] transition-colors duration-300"
             style={{ fontFamily: "'Lato', sans-serif", fontWeight: 700 }}
           >
             View All Gift Sets

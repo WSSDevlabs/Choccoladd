@@ -119,6 +119,80 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+/* ── Button hover animations ─────────────────────────────────────────── */
+
+/* Fill left → right  (Hero: dark → gold) */
+.btn-ltr {
+  background-image: linear-gradient(to right, #C8A040 50%, #0A0402 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  transition: background-position 0.42s ease, color 0.35s ease;
+}
+.btn-ltr:hover { background-position: 0 0; color: #0A0402; }
+
+/* Outline fill left → right  (Hero: transparent → gold) */
+.btn-border-ltr {
+  background-image: linear-gradient(to right, #C8A040 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  transition: background-position 0.42s ease, color 0.35s ease, border-color 0.35s ease;
+}
+.btn-border-ltr:hover { background-position: 0 0; color: #0A0402; border-color: #C8A040; }
+
+/* Fill bottom → top  (Products Order: dark → gold) */
+.btn-btt {
+  background-image: linear-gradient(to top, #C8A040 50%, #0A0402 50%);
+  background-size: 100% 200%;
+  background-position: 0 0;
+  transition: background-position 0.42s ease, color 0.35s ease;
+}
+.btn-btt:hover { background-position: 0 100%; color: #0A0402; }
+
+/* Fill right → left  (Products View All: dark → gold from right) */
+.btn-rtl {
+  background-image: linear-gradient(to right, #0A0402 50%, #C8A040 50%);
+  background-size: 200% 100%;
+  background-position: 0 0;
+  transition: background-position 0.42s ease, color 0.35s ease;
+}
+.btn-rtl:hover { background-position: 100% 0; color: #fdf6ee; }
+
+/* Glow lift  (Gift Sets Order Gift: colour-agnostic) */
+.btn-glow {
+  transition: filter 0.3s ease, transform 0.25s ease, opacity 0.25s ease;
+}
+.btn-glow:hover {
+  filter: brightness(1.18) drop-shadow(0 0 10px rgba(200,160,64,0.55));
+  transform: translateY(-2px);
+}
+
+/* Fill top → bottom  (Gift Sets View All: transparent → gold) */
+.btn-ttb {
+  background-image: linear-gradient(to bottom, #C8A040 50%, transparent 50%);
+  background-size: 100% 200%;
+  background-position: 0 100%;
+  transition: background-position 0.42s ease, color 0.35s ease;
+}
+.btn-ttb:hover { background-position: 0 0; color: #2c1810; }
+
+/* Shimmer sweep  (Contact Submit) */
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+.btn-shine::after {
+  content: '';
+  position: absolute;
+  top: -60%;
+  left: -80%;
+  width: 55%;
+  height: 220%;
+  background: linear-gradient(to right, transparent, rgba(200,160,64,0.45), transparent);
+  transform: skewX(-18deg);
+  transition: left 0.55s ease;
+}
+.btn-shine:hover::after { left: 130%; }
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

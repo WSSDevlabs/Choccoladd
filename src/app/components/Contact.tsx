@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "motion/react";
-import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Instagram, Facebook } from "lucide-react";
 
 const inputClass =
   "w-full px-4 py-3 rounded-xl border border-[#1C0E06]/10 bg-white text-[#1C0E06] placeholder-[#7A5430]/40 focus:outline-none focus:border-[#C8A040] focus:ring-2 focus:ring-[#C8A040]/15 transition-all text-sm";
@@ -48,7 +48,7 @@ export function Contact() {
             className="text-[#1C0E06] mb-4"
             style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 700 }}
           >
-            Get in Touch
+            Contact Us
           </h2>
           <div className="w-16 h-px bg-[#C8A040] mx-auto" />
         </div>
@@ -71,7 +71,7 @@ export function Contact() {
               className="text-[#C8A040] text-xs uppercase tracking-widest mb-4"
               style={{ fontFamily: "'DM Mono', monospace" }}
             >
-              Get in Touch
+              Contact Us
             </p>
             <h3
               className="text-[#fdf6ee] mb-4"
@@ -93,7 +93,7 @@ export function Contact() {
             </p>
 
             {/* Contact info items */}
-            <div className="space-y-5 mb-10">
+            <div className="space-y-5 mb-8">
               {[
                 { icon: Phone,  label: "Our Phone", value: "+60 19-631 9373" },
                 { icon: Mail,   label: "Email",      value: "sufeilnewboxgreens@gmail.com" },
@@ -122,6 +122,30 @@ export function Contact() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* Operating Hours */}
+            <div className="flex items-start gap-4 mb-10 p-4 rounded-xl border border-[#C8A040]/20" style={{ background: "rgba(200,160,64,0.07)" }}>
+              <div
+                className="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0"
+                style={{ background: "#C8A040" }}
+              >
+                <Clock size={16} className="text-[#0A0402]" />
+              </div>
+              <div>
+                <p
+                  className="text-[#fdf6ee]/40 text-[10px] uppercase tracking-widest mb-1"
+                  style={{ fontFamily: "'DM Mono', monospace" }}
+                >
+                  Operating Hours
+                </p>
+                <p className="text-[#fdf6ee] text-sm" style={{ fontFamily: "'Lato', sans-serif", fontWeight: 400 }}>
+                  Mon – Sat: 10:00 AM – 8:00 PM
+                </p>
+                <p className="text-[#C8A040] text-xs mt-0.5" style={{ fontFamily: "'DM Mono', monospace" }}>
+                  Sunday: Closed
+                </p>
+              </div>
             </div>
 
             {/* Social icons */}
@@ -205,7 +229,7 @@ export function Contact() {
               {/* Submit */}
               <button
                 type="submit"
-                className="w-full py-3.5 rounded-xl bg-[#0A0402] text-[#FAF4EA] text-sm uppercase tracking-widest hover:bg-[#C8A040] hover:text-[#0A0402] transition-colors duration-200"
+                className="btn-shine w-full py-3.5 rounded-xl bg-[#0A0402] text-[#FAF4EA] text-sm uppercase tracking-widest"
                 style={{ fontFamily: "'Lato', sans-serif", fontWeight: 700 }}
               >
                 Submit Now
