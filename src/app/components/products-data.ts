@@ -1,5 +1,3 @@
-﻿const placeholderImage = "/images/placeholder.svg";
-
 export type Product = {
   id: number;
   name: string;
@@ -11,7 +9,7 @@ export type Product = {
 };
 
 export const products: Product[] = [
-  // â”€â”€ CHOCOLATE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ── CHOCOLATE ───────────────────────────────────────────────────────────
   {
     id: 1,
     name: "80% Cocoa Chocolate Praline",
@@ -34,68 +32,28 @@ export const products: Product[] = [
   },
   {
     id: 3,
-    name: "80% Cocoa Chocolate Praline (Gift Set)",
-    price: "RM 8.00",
-    description:
-      "Our signature 80% cocoa pralines, specially priced for gift set bundles. Same rich flavour, perfect for sharing and gifting. 4 units per box, 40g each.",
-    image: placeholderImage,
-    tag: "Gift Set",
-    category: "Chocolate",
-  },
-  {
-    id: 4,
-    name: "Panning Chocolate (Gift Set)",
-    price: "RM 8.00",
-    description:
-      "Smooth panning chocolates specially priced for gift set pairings. A crowd-pleasing treat ideal for any occasion. 8 units per pack, 40g each.",
-    image: placeholderImage,
-    tag: "Gift Set",
-    category: "Chocolate",
-  },
-  {
-    id: 5,
     name: "Keto Coffee Chocolates, 80% Cocoa",
     price: "RM 18.00",
     description:
-      "Bold 80% cocoa chocolates infused with real coffee â€” a keto-friendly indulgence for dark chocolate and coffee lovers alike.",
+      "Bold 80% cocoa chocolates infused with real coffee — a keto-friendly indulgence for dark chocolate and coffee lovers alike.",
     image: "/images/products/keto-coffee-chocolates.jpg",
     tag: "Keto",
     category: "Chocolate",
   },
   {
-    id: 6,
-    name: "Keto Chocolates Seasalt, 80% Cocoa",
-    price: "RM 18.00",
-    description:
-      "Rich 80% cocoa dark chocolates finished with a delicate touch of sea salt. Keto-friendly and intensely satisfying.",
-    image: placeholderImage,
-    tag: "Keto",
-    category: "Chocolate",
-  },
-  {
-    id: 7,
+    id: 4,
     name: "Keto Prebiotic Chocolates",
     price: "RM 18.00",
     description:
-      "Premium dark chocolates enriched with prebiotic fibre â€” crafted for gut health without compromising on flavour.",
+      "Premium dark chocolates enriched with prebiotic fibre — crafted for gut health without compromising on flavour.",
     image: "/images/products/keto-prebiotic-chocolates.jpg",
     tag: "Keto",
     category: "Chocolate",
   },
 
-  // â”€â”€ BEVERAGES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ── BEVERAGES ────────────────────────────────────────────────────────────
   {
-    id: 8,
-    name: "Cocoa Milk Chocolate Drink",
-    price: "RM 30.00",
-    description:
-      "A creamy, comforting cocoa milk drink made from real Malaysian cocoa. Simply add hot water and enjoy. 8 sachets per pack, 50g each.",
-    image: placeholderImage,
-    tag: null,
-    category: "Beverages",
-  },
-  {
-    id: 9,
+    id: 5,
     name: "Nafiyya Cocoa Leaf Tea",
     price: "RM 18.90",
     description:
@@ -105,7 +63,7 @@ export const products: Product[] = [
     category: "Beverages",
   },
   {
-    id: 10,
+    id: 6,
     name: "Cocoa With Coconut Sugar Drinks Powder, 8 Sachet",
     price: "RM 35.00",
     description:
@@ -115,7 +73,7 @@ export const products: Product[] = [
     category: "Beverages",
   },
   {
-    id: 11,
+    id: 7,
     name: "Cocoa With Tongkat Ali Drinks Powder, 8 Sachet",
     price: "RM 35.00",
     description:
@@ -125,7 +83,7 @@ export const products: Product[] = [
     category: "Beverages",
   },
   {
-    id: 12,
+    id: 8,
     name: "Cocoa With Kacip Fatimah Drinks Powder, 8 Sachet",
     price: "RM 35.00",
     description:
@@ -135,4 +93,3 @@ export const products: Product[] = [
     category: "Beverages",
   },
 ];
-
