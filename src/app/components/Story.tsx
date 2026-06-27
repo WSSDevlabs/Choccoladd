@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "motion/react";
-const placeholderImage = "/images/placeholder.svg";
 
 const milestones = [
   { year: "2010", event: "Sufeil and Harun met as work colleagues, bonding over technology ideas and entrepreneurial dreams in KL cafés." },
@@ -23,20 +22,20 @@ export function Story() {
             transition={{ duration: 1.0 }}
             className="relative pb-14 md:pb-8 pr-4 md:pr-0"
           >
-            <div className="relative rounded-sm overflow-hidden aspect-[4/5] bg-[#ecddc8]">
+            {/* Big frame */}
+            <div className="relative rounded-sm overflow-hidden aspect-[4/5]">
               <img
-                src={placeholderImage}
-                alt="Cacao fruit placeholder"
-                className="w-full h-full object-cover"
+                src="/images/general/OurStorybg3.png"
+                alt="Our Story"
+                className="w-full h-full object-cover object-center"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#2c1810]/30 to-transparent" />
             </div>
-            {/* Floating inset image */}
-            <div className="absolute -bottom-8 right-0 md:-right-6 w-36 h-36 md:w-48 md:h-48 border-4 border-[#fdf6ee] rounded-sm overflow-hidden shadow-2xl bg-[#ecddc8]">
+            {/* Floating inset — LKMLogo */}
+            <div className="absolute -bottom-8 right-0 md:-right-6 w-36 h-36 md:w-48 md:h-48 border-4 border-[#fdf6ee] rounded-sm overflow-hidden shadow-2xl bg-white flex items-center justify-center p-3">
               <img
-                src={placeholderImage}
-                alt="Cocoa beans placeholder"
-                className="w-full h-full object-cover"
+                src="/images/general/LKMLogo.png"
+                alt="Lembaga Koko Malaysia"
+                className="w-full h-full object-contain"
               />
             </div>
             {/* Stat badge */}

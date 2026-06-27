@@ -36,7 +36,7 @@ function GiftCard({ set }: { set: GiftSet }) {
       layout
       className="group flex flex-col bg-[#2C1206]/70 rounded-2xl border border-[#C8A040]/20 overflow-hidden hover:border-[#C8A040]/50 transition-all duration-300"
     >
-      <div className="relative h-52 overflow-hidden bg-[#2c1810]">
+      <div className="relative aspect-square overflow-hidden bg-[#2c1810]">
         <img
           src={set.image}
           alt={set.name}
@@ -71,20 +71,7 @@ function GiftCard({ set }: { set: GiftSet }) {
           {set.description}
         </p>
 
-        <ul className="mb-6 space-y-1.5">
-          {set.includes.map((item) => (
-            <li
-              key={item}
-              className="flex items-center gap-2 text-[#C8A040] text-xs"
-              style={{ fontFamily: "'DM Mono', monospace" }}
-            >
-              <span className="w-1 h-1 rounded-full bg-[#C8A040] flex-shrink-0" />
-              {item}
-            </li>
-          ))}
-        </ul>
-
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col gap-2">
           <span
             className="text-[#C8A040]"
             style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: "1.2rem" }}
@@ -93,7 +80,7 @@ function GiftCard({ set }: { set: GiftSet }) {
           </span>
           <button
             onClick={handleWhatsApp}
-            className="px-5 py-2.5 text-xs uppercase tracking-widest text-[#1A0802] hover:opacity-90 transition-opacity"
+            className="w-full py-2.5 text-xs uppercase tracking-widest text-[#fdf6ee] hover:opacity-85 transition-opacity"
             style={{ background: set.accent, fontFamily: "'Lato', sans-serif", fontWeight: 700 }}
           >
             Order Gift

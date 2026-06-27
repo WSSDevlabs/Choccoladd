@@ -55,7 +55,7 @@ export const nonFoodProducts: NonFoodProduct[] = [
     name: "Cocoa Skincare Set",
     price: "RM 250.00",
     description:
-      "The complete Choccoladd skincare routine â€” Facial Foam, Day Cream, Night Cream, and Facial Serum bundled together at a special set price.",
+      “The complete Choccoladd skincare routine. Includes Facial Foam, Day Cream, Night Cream, and Facial Serum bundled at a special set price.”,
     image: "/images/NonFood/cocoa-skincare-set.jpg",
     tag: "Bundle",
     category: "Skincare",

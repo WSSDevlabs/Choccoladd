@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { motion, useMotionValue, useTransform, useSpring } from "motion/react";
+import { motion } from "motion/react";
 import { products } from "./products-data";
 
 const featuredProducts = products.slice(0, 4);
@@ -14,32 +14,19 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
     window.open(`https://wa.me/60196319373?text=${text}`, "_blank");
   };
 
-  const mx = useMotionValue(0);
-  const my = useMotionValue(0);
-  const rotateX = useSpring(useTransform(my, [-0.5, 0.5], [7, -7]), { stiffness: 200, damping: 25 });
-  const rotateY = useSpring(useTransform(mx, [-0.5, 0.5], [-7, 7]), { stiffness: 200, damping: 25 });
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      whileHover={{ scale: 1.03, zIndex: 5 }}
       viewport={{ once: true }}
       transition={{ duration: 0.85, delay: index * 0.15, ease: [0.22, 1, 0.36, 1] }}
-      style={{ transformPerspective: 800, rotateX, rotateY }}
-      onMouseMove={(e) => {
-        const rect = e.currentTarget.getBoundingClientRect();
-        mx.set((e.clientX - rect.left) / rect.width - 0.5);
-        my.set((e.clientY - rect.top) / rect.height - 0.5);
-      }}
-      onMouseLeave={() => { mx.set(0); my.set(0); }}
-      className="group bg-card rounded-2xl overflow-hidden border border-[#3d1c0a]/10 hover:shadow-2xl hover:shadow-[#C8A040]/10 transition-shadow duration-300 flex flex-col"
+      className="group bg-card rounded-2xl overflow-hidden border border-[#3d1c0a]/10 hover:shadow-xl hover:shadow-[#C8A040]/10 transition-shadow duration-300 flex flex-col"
     >
       <div className="relative overflow-hidden aspect-square bg-[#ecddc8]">
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          className="w-full h-full object-cover group-hover:scale-[1.08] transition-transform duration-1000 ease-in-out"
         />
         {product.tag && (
           <span
@@ -52,8 +39,8 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
       </div>
       <div className="p-3 sm:p-5 flex flex-col flex-1">
         <h3
-          className="text-[#2c1810] mb-1"
-          style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, fontSize: "1rem" }}
+          className="text-[#2c1810] mb-1 min-h-[2.75rem]"
+          style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, fontSize: "1rem", lineHeight: 1.4 }}
         >
           {product.name}
         </h3>
@@ -87,7 +74,6 @@ export function Products() {
   return (
     <section id="products" className="py-24" style={{ background: "#F0DEC8" }}>
       <div className="max-w-7xl mx-auto px-6">
-        {/* Section header */}
         <div className="text-center mb-16">
           <p
             className="text-[#C8A040] text-xs uppercase tracking-widest mb-3"
@@ -104,7 +90,6 @@ export function Products() {
           <div className="w-16 h-0.5 bg-[#C8A040] mx-auto" />
         </div>
 
-        {/* Product grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
           {featuredProducts.map((product, i) => (
             <ProductCard key={product.id} product={product} index={i} />
@@ -112,7 +97,11 @@ export function Products() {
         </div>
 
         <div className="mt-12 text-center">
-          <Link href="/all-products" className="inline-flex items-center justify-center px-8 py-3 bg-[#0A0402] text-[#FAF4EA] text-sm uppercase tracking-widest hover:bg-[#C8A040] hover:text-[#0A0402] transition-colors duration-200" style={{ fontFamily: "'Lato', sans-serif", fontWeight: 700 }}>
+          <Link
+            href="/all-products"
+            className="inline-flex items-center justify-center px-8 py-3 bg-[#0A0402] text-[#FAF4EA] text-sm uppercase tracking-widest hover:bg-[#C8A040] hover:text-[#0A0402] transition-colors duration-200"
+            style={{ fontFamily: "'Lato', sans-serif", fontWeight: 700 }}
+          >
             View All Products
           </Link>
         </div>

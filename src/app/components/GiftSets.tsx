@@ -40,11 +40,12 @@ function GiftSetCard({ set, index }: { set: GiftSet; index: number }) {
       onMouseLeave={() => { mx.set(0); my.set(0); }}
       className="group flex flex-col bg-[#2C1206]/70 rounded-2xl border border-[#C8A040]/20 overflow-hidden hover:border-[#C8A040]/50 hover:shadow-2xl hover:shadow-[#C8A040]/10 transition-all duration-300"
     >
-      <div className="relative h-52 overflow-hidden bg-[#2c1810]">
+      {/* Image */}
+      <div className="relative aspect-square overflow-hidden bg-[#2c1810]">
         <img
           src={set.image}
           alt={set.name}
-          className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"
+          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 ease-in-out"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#2c1810]/60 to-transparent" />
         <div
@@ -54,28 +55,36 @@ function GiftSetCard({ set, index }: { set: GiftSet; index: number }) {
           <Icon size={18} className="text-[#fdf6ee]" />
         </div>
       </div>
+
+      {/* Content */}
       <div className="p-3 sm:p-6 flex flex-col flex-1">
-        <h3 className="text-[#fdf6ee] mb-2" style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, fontSize: "1.25rem" }}>
+        {/* Fixed-height title so descriptions all start at the same line */}
+        <h3
+          className="text-[#fdf6ee] mb-3 min-h-[3.5rem]"
+          style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, fontSize: "1.15rem", lineHeight: 1.4 }}
+        >
           {set.name}
         </h3>
-        <p className="text-[#fdf6ee]/60 text-sm mb-5 flex-1" style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300, lineHeight: 1.7 }}>
+
+        {/* Description fills remaining space, pushing price+button to bottom */}
+        <p
+          className="text-[#fdf6ee]/60 text-sm flex-1 mb-5"
+          style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300, lineHeight: 1.7 }}
+        >
           {set.description}
         </p>
-        <ul className="mb-6 space-y-1.5">
-          {set.includes.map((item) => (
-            <li key={item} className="flex items-center gap-2 text-[#C8A040] text-xs" style={{ fontFamily: "'DM Mono', monospace" }}>
-              <span className="w-1 h-1 rounded-full bg-[#C8A040] flex-shrink-0" />
-              {item}
-            </li>
-          ))}
-        </ul>
-        <div className="flex items-center justify-between">
-          <span className="text-[#C8A040]" style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: "1.3rem" }}>
+
+        {/* Price above button */}
+        <div className="flex flex-col gap-2">
+          <span
+            className="text-[#C8A040]"
+            style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: "1.2rem" }}
+          >
             {set.price}
           </span>
           <button
             onClick={handleWhatsApp}
-            className="px-5 py-2.5 text-xs uppercase tracking-widest text-[#2c1810] hover:opacity-90 transition-opacity"
+            className="w-full py-2.5 text-xs uppercase tracking-widest text-[#fdf6ee] hover:opacity-85 transition-opacity"
             style={{ background: set.accent, fontFamily: "'Lato', sans-serif", fontWeight: 700 }}
           >
             Order Gift
@@ -107,22 +116,22 @@ export function GiftSets() {
             Gift Sets
           </h2>
           <p
-            className="text-[#fdf6ee]/60 max-w-xl mx-auto"
-            style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300, fontSize: "1rem", lineHeight: 1.75 }}
+            className="text-[#fdf6ee]/60 mx-auto whitespace-nowrap"
+            style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300, fontSize: "1rem" }}
           >
             The perfect gift for every occasion: birthdays, weddings, corporate events, or simply to show someone you care.
           </p>
           <div className="w-16 h-0.5 bg-[#C8A040] mx-auto mt-4" />
         </div>
 
-        {/* Cards — show first 3 only */}
+        {/* Cards */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-8">
           {giftSets.slice(0, PREVIEW_COUNT).map((set, i) => (
             <GiftSetCard key={set.id} set={set} index={i} />
           ))}
         </div>
 
-        {/* View All button */}
+        {/* View All */}
         <div className="text-center mt-12">
           <button
             onClick={() => router.push("/all-gift-sets")}
