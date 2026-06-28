@@ -98,7 +98,7 @@ export function Contact() {
                 { icon: Phone,  label: "Our Phone",       value: "+60 19-631 9373" },
                 { icon: Mail,   label: "Email",            value: "sufeilnewboxgreens@gmail.com" },
                 { icon: MapPin, label: "Address",          value: "Desa Pandan, 55100 Kuala Lumpur" },
-                { icon: Clock,  label: "Operating Hours",  value: "Mon – Sat: 10:00 AM – 8:00 PM  •  Sunday: Closed" },
+                { icon: Clock,  label: "Operating Hours",  value: "Mon – Sat: 10:00 AM – 8:00 PM\nSunday: Closed" },
               ].map(({ icon: Icon, label, value }) => (
                 <div key={label} className="flex items-center gap-4">
                   <div
@@ -115,7 +115,7 @@ export function Contact() {
                       {label}
                     </p>
                     <p
-                      className="text-[#fdf6ee] text-sm"
+                      className="text-[#fdf6ee] text-sm whitespace-pre-line"
                       style={{ fontFamily: "'Lato', sans-serif", fontWeight: 400 }}
                     >
                       {value}
