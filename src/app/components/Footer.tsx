@@ -158,8 +158,8 @@ export function Footer() {
             {/* Social icons */}
             <div className="flex items-center gap-3">
               {[
-                { icon: Instagram, href: "https://www.instagram.com/choccoladd/" },
-                { icon: Facebook,  href: "https://www.facebook.com/choccoladd" },
+                { icon: Instagram, href: "https://www.instagram.com/chocco_ladd?utm_source=qr&igsh=Yjg0MDAwNnBiYzhs" },
+                { icon: Facebook,  href: "https://www.facebook.com/people/Choccoladd/61568651560003/?rdid=JtIatxt8CJ7M41LK&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Lo4TRrPY4%2F" },
               ].map(({ icon: Icon, href }) => (
                 <a
                   key={href}

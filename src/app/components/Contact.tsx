@@ -137,7 +137,7 @@ export function Contact() {
                 <a href="https://www.instagram.com/chocco_ladd?utm_source=qr&igsh=Yjg0MDAwNnBiYzhs" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full flex items-center justify-center border border-[#C8A040]/30 text-[#C8A040] hover:bg-[#C8A040] hover:text-[#0A0402] transition-colors duration-200">
                   <Instagram size={15} />
                 </a>
-                <a href="https://www.facebook.com/share/1Lo4TRrPY4/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full flex items-center justify-center border border-[#C8A040]/30 text-[#C8A040] hover:bg-[#C8A040] hover:text-[#0A0402] transition-colors duration-200">
+                <a href="https://www.facebook.com/people/Choccoladd/61568651560003/?rdid=JtIatxt8CJ7M41LK&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Lo4TRrPY4%2F" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full flex items-center justify-center border border-[#C8A040]/30 text-[#C8A040] hover:bg-[#C8A040] hover:text-[#0A0402] transition-colors duration-200">
                   <Facebook size={15} />
                 </a>
                 <a href="#" className="w-9 h-9 rounded-full flex items-center justify-center border border-[#C8A040]/30 text-[#C8A040] hover:bg-[#C8A040] hover:text-[#0A0402] transition-colors duration-200">
