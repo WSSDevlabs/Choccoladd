@@ -52,7 +52,7 @@ export function Navbar() {
       {/* Main navbar */}
       <div
         className={`transition-all duration-300 ${
-          !isHome || scrolled
+          !isHome || scrolled || isOpen
             ? "bg-[#FAF4EA]/98 backdrop-blur-sm shadow-sm border-b border-black/8"
             : "bg-transparent"
         }`}

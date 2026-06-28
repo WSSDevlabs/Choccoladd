@@ -145,7 +145,7 @@ export default function AllNonFoodPage() {
 
           {/* Sticky Search + Sort */}
           <div
-            className="sticky top-36 z-20 border-b border-white/8 pt-2 pb-3 mb-8"
+            className="sticky top-24 sm:top-36 z-20 border-b border-white/8 pt-2 pb-3 mb-8"
             style={{ background: BG, boxShadow: `0 -20px 0 20px ${BG}, 0 2px 8px rgba(0,0,0,0.4)` }}
           >
             <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row gap-3">

@@ -108,7 +108,8 @@ export function Footer() {
                       router.push("/#location");
                     }
                   }}
-                  className="hover:text-[#C8A040] transition-colors cursor-pointer text-left"
+                  className="hover:text-[#C8A040] transition-colors cursor-pointer text-left text-sm"
+                  style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300 }}
                 >
                   Location
                 </button>
@@ -118,7 +119,8 @@ export function Footer() {
                   href="https://wa.me/60196319373?text=Hi!%20I%20would%20like%20to%20place%20an%20order."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-[#C8A040] transition-colors"
+                  className="hover:text-[#C8A040] transition-colors text-sm"
+                  style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300 }}
                 >
                   Online Shop
                 </a>

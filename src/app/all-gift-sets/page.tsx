@@ -145,7 +145,7 @@ export default function AllGiftSetsPage() {
           </div>
 
           {/* Sticky Search + Sort */}
-          <div className="sticky top-36 z-20 border-b border-[#C8A040]/10 pt-2 pb-3 mb-8" style={{ background: "#1A0802", boxShadow: '0 -20px 0 20px #1A0802, 0 2px 6px rgba(0,0,0,0.2)' }}>
+          <div className="sticky top-24 sm:top-36 z-20 border-b border-[#C8A040]/10 pt-2 pb-3 mb-8" style={{ background: "#1A0802", boxShadow: '0 -40px 0 40px #1A0802, 0 2px 6px rgba(0,0,0,0.2)' }}>
             <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row gap-3">
               <input
                 className="flex-1 px-4 py-3 border border-[#C8A040]/30 bg-[#2C1206]/50 text-[#fdf6ee] placeholder-[#fdf6ee]/30 focus:outline-none focus:border-[#C8A040] transition-colors"

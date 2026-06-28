@@ -107,7 +107,7 @@ export default function AllProductsPage() {
           </div>
 
           {/* Sticky Search + Sort */}
-          <div className="sticky top-36 z-20 bg-[#FAF4EA] border-b border-[#1C0E06]/10 pt-2 pb-3 px-6 mb-8" style={{ boxShadow: '0 -20px 0 20px #FAF4EA, 0 2px 6px rgba(0,0,0,0.06)' }}>
+          <div className="sticky top-24 sm:top-36 z-20 bg-[#FAF4EA] border-b border-[#1C0E06]/10 pt-2 pb-3 px-6 mb-8" style={{ boxShadow: '0 -40px 0 40px #FAF4EA, 0 2px 6px rgba(0,0,0,0.06)' }}>
           <div className="max-w-7xl mx-auto flex flex-col sm:flex-row gap-3">
             {/* Search */}
             <input
