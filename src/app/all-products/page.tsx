@@ -77,7 +77,7 @@ export default function AllProductsPage() {
       if (sortBy === "price-asc")  return parsePrice(a.price) - parsePrice(b.price);
       if (sortBy === "price-desc") return parsePrice(b.price) - parsePrice(a.price);
       if (sortBy === "name-asc")   return a.name.localeCompare(b.name);
-      return 0; // latest = original order
+      return 0;
     });
   }, [search, sortBy]);
 
