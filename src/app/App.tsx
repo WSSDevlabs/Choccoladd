@@ -33,7 +33,7 @@ export default function App() {
       <Hero />
       <Story />
       <CompanyProfile />
-      <Products />
+<Products />
       <GiftSets />
       <InStoreExclusive />
       <LocationMap />

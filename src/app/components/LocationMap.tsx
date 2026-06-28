@@ -49,7 +49,7 @@ export function LocationMap() {
   const [activeId, setActiveId] = useState(1);
 
   return (
-    <section className="py-24 bg-[#F0DEC8]">
+    <section id="location" className="py-14 bg-[#F0DEC8]">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}

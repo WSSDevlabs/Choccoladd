@@ -40,7 +40,7 @@ function GiftCard({ set }: { set: GiftSet }) {
         <img
           src={set.image}
           alt={set.name}
-          className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+          className="w-full h-full object-cover group-hover:scale-[1.15] transition-all duration-500"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#2c1810]/60 to-transparent" />
         <div
@@ -120,10 +120,9 @@ export default function AllGiftSetsPage() {
         transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
       >
       <div className="min-h-screen pt-36 pb-20" style={{ background: "#1A0802" }}>
-        <div className="max-w-7xl mx-auto px-6">
 
           {/* Header */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 px-6">
             <p
               className="text-[#C8A040] text-xs uppercase tracking-widest mb-3"
               style={{ fontFamily: "'DM Mono', monospace" }}
@@ -145,66 +144,66 @@ export default function AllGiftSetsPage() {
             <div className="w-16 h-0.5 bg-[#C8A040] mx-auto mt-4" />
           </div>
 
-          {/* Search + Sort */}
-          <div className="flex flex-col sm:flex-row gap-3 mb-10">
-            {/* Search */}
-            <input
-              className="flex-1 px-4 py-3 border border-[#C8A040]/30 bg-[#2C1206]/50 text-[#fdf6ee] placeholder-[#fdf6ee]/30 focus:outline-none focus:border-[#C8A040] transition-colors"
-              placeholder="Search gift sets..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              style={{ fontFamily: "'Lato', sans-serif" }}
-            />
-
-            {/* Sort dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => setSortOpen((v) => !v)}
-                className="w-full sm:w-52 flex items-center justify-between gap-2 px-4 py-3 border border-[#C8A040]/30 bg-[#2C1206]/50 text-[#fdf6ee] text-sm hover:border-[#C8A040] transition-colors"
+          {/* Sticky Search + Sort */}
+          <div className="sticky top-36 z-20 border-b border-[#C8A040]/10 pt-2 pb-3 mb-8" style={{ background: "#1A0802", boxShadow: '0 -20px 0 20px #1A0802, 0 2px 6px rgba(0,0,0,0.2)' }}>
+            <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row gap-3">
+              <input
+                className="flex-1 px-4 py-3 border border-[#C8A040]/30 bg-[#2C1206]/50 text-[#fdf6ee] placeholder-[#fdf6ee]/30 focus:outline-none focus:border-[#C8A040] transition-colors"
+                placeholder="Search gift sets..."
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
                 style={{ fontFamily: "'Lato', sans-serif" }}
-              >
-                <span>{currentSort.label}</span>
-                <ChevronDown size={15} className={`text-[#C8A040] transition-transform duration-200 ${sortOpen ? "rotate-180" : ""}`} />
-              </button>
-              {sortOpen && (
-                <div className="absolute right-0 mt-1 w-52 bg-[#1A0802] border border-[#C8A040]/20 shadow-2xl z-20 overflow-hidden">
-                  {SORT_OPTIONS.map((opt) => (
-                    <button
-                      key={opt.value}
-                      onClick={() => { setSortBy(opt.value); setSortOpen(false); }}
-                      className={`w-full text-left px-4 py-3 text-sm transition-colors duration-150 ${
-                        sortBy === opt.value
-                          ? "bg-[#C8A040] text-[#1A0802]"
-                          : "text-[#fdf6ee]/70 hover:bg-[#2C1206] hover:text-[#C8A040]"
-                      }`}
-                      style={{ fontFamily: "'Lato', sans-serif" }}
-                    >
-                      {sortBy === opt.value && <span className="mr-2">✓</span>}
-                      {opt.label}
-                    </button>
-                  ))}
-                </div>
-              )}
+              />
+              <div className="relative">
+                <button
+                  onClick={() => setSortOpen((v) => !v)}
+                  className="w-full sm:w-52 flex items-center justify-between gap-2 px-4 py-3 border border-[#C8A040]/30 bg-[#2C1206]/50 text-[#fdf6ee] text-sm hover:border-[#C8A040] transition-colors"
+                  style={{ fontFamily: "'Lato', sans-serif" }}
+                >
+                  <span>{currentSort.label}</span>
+                  <ChevronDown size={15} className={`text-[#C8A040] transition-transform duration-200 ${sortOpen ? "rotate-180" : ""}`} />
+                </button>
+                {sortOpen && (
+                  <div className="absolute right-0 mt-1 w-52 bg-[#1A0802] border border-[#C8A040]/20 shadow-2xl z-30 overflow-hidden">
+                    {SORT_OPTIONS.map((opt) => (
+                      <button
+                        key={opt.value}
+                        onClick={() => { setSortBy(opt.value); setSortOpen(false); }}
+                        className={`w-full text-left px-4 py-3 text-sm transition-colors duration-150 ${
+                          sortBy === opt.value
+                            ? "bg-[#C8A040] text-[#1A0802]"
+                            : "text-[#fdf6ee]/70 hover:bg-[#2C1206] hover:text-[#C8A040]"
+                        }`}
+                        style={{ fontFamily: "'Lato', sans-serif" }}
+                      >
+                        {sortBy === opt.value && <span className="mr-2">✓</span>}
+                        {opt.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
 
           {/* Grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-8">
-            {displayed.map((set) => (
-              <GiftCard key={set.id} set={set} />
-            ))}
-          </div>
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-8">
+              {displayed.map((set) => (
+                <GiftCard key={set.id} set={set} />
+              ))}
+            </div>
 
-          {displayed.length === 0 && (
-            <p
-              className="mt-10 text-center text-[#fdf6ee]/40"
-              style={{ fontFamily: "'Lato', sans-serif" }}
-            >
-              No gift sets found. Try a different search term.
-            </p>
-          )}
+            {displayed.length === 0 && (
+              <p
+                className="mt-10 text-center text-[#fdf6ee]/40"
+                style={{ fontFamily: "'Lato', sans-serif" }}
+              >
+                No gift sets found. Try a different search term.
+              </p>
+            )}
+          </div>
         </div>
-      </div>
       </motion.div>
       <Footer />
     </>

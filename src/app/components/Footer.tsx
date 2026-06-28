@@ -40,25 +40,42 @@ export function Footer() {
   return (
     <footer className="bg-[#0A0402] text-[#fdf6ee]/60 py-12">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_2fr] gap-10 mb-10">
 
-          {/* Brand */}
-          <div className="md:col-span-1">
+          {/* About Us */}
+          <div>
+            <p
+              className="text-[#C8A040] text-xs uppercase tracking-widest mb-4"
+              style={{ fontFamily: "'DM Mono', monospace" }}
+            >
+              About Us
+            </p>
             <p
               className="text-sm max-w-xs mb-6"
               style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300, lineHeight: 1.75 }}
             >
               Premium praline chocolates, panning treats, and herbal cocoa sachet drinks by Newbox Greens Ventures, crafted from the finest Malaysian cacao.
             </p>
-            <img
-              src="/images/logo/LogoChoccoladd.png"
-              alt="Choccoladd"
-              className="h-16 w-auto object-contain"
-            />
+            {/* Logo row */}
+            <div className="flex flex-wrap items-center gap-3 max-w-full">
+              <img src="/images/logo/LogoChoccoladd.png" alt="Choccoladd" className="h-16 w-auto object-contain flex-shrink-0" />
+              <div className="h-16 w-16 flex-shrink-0 rounded-full bg-white flex items-center justify-center p-1.5" style={{ minWidth: "4rem" }}>
+                <img src="/images/logo/LogoNBG.png" alt="Newbox Greens" className="h-full w-full object-contain" />
+              </div>
+              <div className="h-16 w-16 flex-shrink-0 rounded-full bg-white flex items-center justify-center p-1.5" style={{ minWidth: "4rem" }}>
+                <img src="/images/logo/LogoLKM.png" alt="LKM" className="h-full w-full object-contain" />
+              </div>
+            </div>
           </div>
 
-          {/* Nav links */}
+          {/* Choccoladd nav links */}
           <div>
+            <p
+              className="text-[#C8A040] text-xs uppercase tracking-widest mb-4"
+              style={{ fontFamily: "'DM Mono', monospace" }}
+            >
+              Choccoladd
+            </p>
             <ul className="space-y-2.5 text-sm" style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300 }}>
               {navItems.map(({ href, label }) => (
                 <li key={href}>
@@ -73,13 +90,68 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact + Social */}
+          {/* Store */}
           <div>
-            <ul className="space-y-2 text-sm mb-6" style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300 }}>
-              <li>sufeilnewboxgreens@gmail.com</li>
-              <li>+60 19-631 9373</li>
-              <li>Desa Pandan, Kuala Lumpur</li>
+            <p
+              className="text-[#C8A040] text-xs uppercase tracking-widest mb-4"
+              style={{ fontFamily: "'DM Mono', monospace" }}
+            >
+              Store
+            </p>
+            <ul className="space-y-2.5 text-sm" style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300 }}>
+              <li>
+                <button
+                  onClick={() => {
+                    if (isHome) {
+                      document.querySelector("#location")?.scrollIntoView({ behavior: "smooth" });
+                    } else {
+                      router.push("/#location");
+                    }
+                  }}
+                  className="hover:text-[#C8A040] transition-colors cursor-pointer text-left"
+                >
+                  Location
+                </button>
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/60196319373?text=Hi!%20I%20would%20like%20to%20place%20an%20order."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#C8A040] transition-colors"
+                >
+                  Online Shop
+                </a>
+              </li>
             </ul>
+          </div>
+
+          {/* Our Updates */}
+          <div>
+            <p
+              className="text-[#C8A040] text-xs uppercase tracking-widest mb-4"
+              style={{ fontFamily: "'DM Mono', monospace" }}
+            >
+              Our Updates
+            </p>
+            {/* Mailing list */}
+            <p className="text-sm mb-3" style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300, lineHeight: 1.6 }}>
+              Join our mailing list to receive exclusive offers and news straight to your inbox.
+            </p>
+            <div className="flex flex-col gap-2 mb-6">
+              <input
+                type="email"
+                placeholder="E-mail"
+                className="w-full px-4 py-2.5 bg-white border border-white/20 text-[#1C0E06] placeholder-[#7A5430]/60 text-sm focus:outline-none focus:border-[#C8A040] transition-colors"
+                style={{ fontFamily: "'Lato', sans-serif" }}
+              />
+              <button
+                className="w-full py-2.5 bg-[#fdf6ee] border border-[#fdf6ee]/20 text-[#1C0E06] text-xs uppercase tracking-widest hover:bg-[#C8A040] hover:text-[#0A0402] hover:border-[#C8A040] transition-colors duration-200"
+                style={{ fontFamily: "'Lato', sans-serif", fontWeight: 700 }}
+              >
+                Subscribe
+              </button>
+            </div>
 
             {/* Social icons */}
             <div className="flex items-center gap-3">
@@ -92,7 +164,7 @@ export function Footer() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full border border-[#C8A040]/30 flex items-center justify-center text-[#fdf6ee]/50 hover:border-[#C8A040] hover:text-[#C8A040] transition-colors duration-200"
+                  className="w-9 h-9 rounded-full bg-[#fdf6ee]/15 border border-[#fdf6ee]/20 flex items-center justify-center text-[#fdf6ee] hover:bg-[#C8A040] hover:border-[#C8A040] hover:text-[#0A0402] transition-colors duration-200"
                 >
                   <Icon size={16} />
                 </a>
@@ -101,7 +173,7 @@ export function Footer() {
                 href="https://www.tiktok.com/@choccoladd?_r=1&_t=ZS-97YoQtSh5b2"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full border border-[#C8A040]/30 flex items-center justify-center text-[#fdf6ee]/50 hover:border-[#C8A040] hover:text-[#C8A040] transition-colors duration-200"
+                className="w-9 h-9 rounded-full bg-[#fdf6ee]/15 border border-[#fdf6ee]/20 flex items-center justify-center text-[#fdf6ee] hover:bg-[#C8A040] hover:border-[#C8A040] hover:text-[#0A0402] transition-colors duration-200"
               >
                 <TikTokIcon />
               </a>
@@ -111,7 +183,7 @@ export function Footer() {
 
         <div className="border-t border-[#fdf6ee]/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="text-xs" style={{ fontFamily: "'DM Mono', monospace" }}>
-            © 2026 Newbox Greens Ventures. All rights reserved.
+            Newbox Greens Ventures (SA0615701-A) © Choccoladd
           </p>
           <p className="text-xs" style={{ fontFamily: "'DM Mono', monospace" }}>
             Made with ♥ in Malaysia

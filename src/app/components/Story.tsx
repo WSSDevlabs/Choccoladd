@@ -11,7 +11,7 @@ const milestones = [
 
 export function Story() {
   return (
-    <section id="story" className="py-24 bg-[#fdf6ee] overflow-hidden">
+    <section id="story" className="py-14 bg-[#fdf6ee] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           {/* Images */}

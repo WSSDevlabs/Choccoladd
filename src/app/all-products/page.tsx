@@ -32,7 +32,7 @@ function ProductCard({ product }: { product: Product }) {
       className="group bg-card rounded-2xl overflow-hidden border border-[#3d1c0a]/10 hover:shadow-xl transition-shadow duration-300 flex flex-col"
     >
       <div className="relative overflow-hidden aspect-square bg-[#ecddc8]">
-        <img src={product.image} alt={product.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        <img src={product.image} alt={product.name} className="w-full h-full object-cover group-hover:scale-[1.15] transition-transform duration-500" />
         {product.tag && (
           <span className="absolute top-3 left-3 bg-[#C8A040] text-[#fdf6ee] px-2 py-0.5 text-xs uppercase tracking-widest" style={{ fontFamily: "'DM Mono', monospace" }}>
             {product.tag}
@@ -92,10 +92,9 @@ export default function AllProductsPage() {
         transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
       >
       <div className="min-h-screen bg-[#FAF4EA] pt-36 pb-20">
-        <div className="max-w-7xl mx-auto px-6">
 
           {/* Header */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 px-6">
             <p className="text-[#C8A040] text-xs uppercase tracking-widest mb-3" style={{ fontFamily: "'DM Mono', monospace" }}>
               Complete Collection
             </p>
@@ -107,8 +106,9 @@ export default function AllProductsPage() {
             </p>
           </div>
 
-          {/* Search + Sort */}
-          <div className="flex flex-col sm:flex-row gap-3 mb-10">
+          {/* Sticky Search + Sort */}
+          <div className="sticky top-36 z-20 bg-[#FAF4EA] border-b border-[#1C0E06]/10 pt-2 pb-3 px-6 mb-8" style={{ boxShadow: '0 -20px 0 20px #FAF4EA, 0 2px 6px rgba(0,0,0,0.06)' }}>
+          <div className="max-w-7xl mx-auto flex flex-col sm:flex-row gap-3">
             {/* Search */}
             <input
               className="flex-1 px-4 py-3 rounded-sm border border-[#1C0E06]/10 bg-white text-[#1C0E06] placeholder-[#7A5430]/50 focus:outline-none focus:border-[#C8A040] transition-colors"
@@ -149,21 +149,23 @@ export default function AllProductsPage() {
               )}
             </div>
           </div>
-
-          {/* Grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
-            {displayedProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
           </div>
 
-          {displayedProducts.length === 0 && (
-            <p className="mt-10 text-center text-[#7A5430]" style={{ fontFamily: "'Lato', sans-serif" }}>
-              No products found. Try a different search term.
-            </p>
-          )}
+          {/* Grid */}
+          <div className="max-w-7xl mx-auto px-6 mt-2">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+              {displayedProducts.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+
+            {displayedProducts.length === 0 && (
+              <p className="mt-10 text-center text-[#7A5430]" style={{ fontFamily: "'Lato', sans-serif" }}>
+                No products found. Try a different search term.
+              </p>
+            )}
+          </div>
         </div>
-      </div>
       </motion.div>
       <Footer />
     </>

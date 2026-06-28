@@ -42,7 +42,7 @@ export const giftSets: GiftSet[] = [
   },
   {
     id: 4,
-    name: "Goodies (Praline Chocolates 80% Cocoa)",
+    name: "Goodies (Praline Chocolates)",
     price: "RM 2.00 / pcs",
     description: "80% cocoa praline chocolates priced per piece. Perfect as event goodies, door gifts, or add-ons to any gift set.",
     image: "/images/gift-sets/goodies-praline-chocolates.jpg",

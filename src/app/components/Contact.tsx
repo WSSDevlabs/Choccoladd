@@ -17,7 +17,7 @@ export function Contact() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        access_key: "5bcb5a77-9fc0-4c50-b914-4f45440f99ea",
+        access_key: "2a1cdf1b-7cc8-46f2-8270-ddce252d4460",
         subject: form.subject || "New message from Choccoladd website",
         from_name: form.name,
         email: form.email,
@@ -33,7 +33,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24" style={{ background: "#FAF4EA" }}>
+    <section id="contact" className="py-14" style={{ background: "#FAF4EA" }}>
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Section header */}
@@ -93,11 +93,12 @@ export function Contact() {
             </p>
 
             {/* Contact info items */}
-            <div className="space-y-5 mb-8">
+            <div className="space-y-5 mb-10">
               {[
-                { icon: Phone,  label: "Our Phone", value: "+60 19-631 9373" },
-                { icon: Mail,   label: "Email",      value: "sufeilnewboxgreens@gmail.com" },
-                { icon: MapPin, label: "Address",    value: "Desa Pandan, 55100 Kuala Lumpur" },
+                { icon: Phone,  label: "Our Phone",       value: "+60 19-631 9373" },
+                { icon: Mail,   label: "Email",            value: "sufeilnewboxgreens@gmail.com" },
+                { icon: MapPin, label: "Address",          value: "Desa Pandan, 55100 Kuala Lumpur" },
+                { icon: Clock,  label: "Operating Hours",  value: "Mon – Sat: 10:00 AM – 8:00 PM  •  Sunday: Closed" },
               ].map(({ icon: Icon, label, value }) => (
                 <div key={label} className="flex items-center gap-4">
                   <div
@@ -124,30 +125,6 @@ export function Contact() {
               ))}
             </div>
 
-            {/* Operating Hours */}
-            <div className="flex items-start gap-4 mb-10 p-4 rounded-xl border border-[#C8A040]/20" style={{ background: "rgba(200,160,64,0.07)" }}>
-              <div
-                className="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0"
-                style={{ background: "#C8A040" }}
-              >
-                <Clock size={16} className="text-[#0A0402]" />
-              </div>
-              <div>
-                <p
-                  className="text-[#fdf6ee]/40 text-[10px] uppercase tracking-widest mb-1"
-                  style={{ fontFamily: "'DM Mono', monospace" }}
-                >
-                  Operating Hours
-                </p>
-                <p className="text-[#fdf6ee] text-sm" style={{ fontFamily: "'Lato', sans-serif", fontWeight: 400 }}>
-                  Mon – Sat: 10:00 AM – 8:00 PM
-                </p>
-                <p className="text-[#C8A040] text-xs mt-0.5" style={{ fontFamily: "'DM Mono', monospace" }}>
-                  Sunday: Closed
-                </p>
-              </div>
-            </div>
-
             {/* Social icons */}
             <div className="mt-auto">
               <p
@@ -157,10 +134,10 @@ export function Contact() {
                 Social Media
               </p>
               <div className="flex gap-3">
-                <a href="#" className="w-9 h-9 rounded-full flex items-center justify-center border border-[#C8A040]/30 text-[#C8A040] hover:bg-[#C8A040] hover:text-[#0A0402] transition-colors duration-200">
+                <a href="https://www.instagram.com/chocco_ladd?utm_source=qr&igsh=Yjg0MDAwNnBiYzhs" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full flex items-center justify-center border border-[#C8A040]/30 text-[#C8A040] hover:bg-[#C8A040] hover:text-[#0A0402] transition-colors duration-200">
                   <Instagram size={15} />
                 </a>
-                <a href="#" className="w-9 h-9 rounded-full flex items-center justify-center border border-[#C8A040]/30 text-[#C8A040] hover:bg-[#C8A040] hover:text-[#0A0402] transition-colors duration-200">
+                <a href="https://www.facebook.com/share/1Lo4TRrPY4/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full flex items-center justify-center border border-[#C8A040]/30 text-[#C8A040] hover:bg-[#C8A040] hover:text-[#0A0402] transition-colors duration-200">
                   <Facebook size={15} />
                 </a>
                 <a href="#" className="w-9 h-9 rounded-full flex items-center justify-center border border-[#C8A040]/30 text-[#C8A040] hover:bg-[#C8A040] hover:text-[#0A0402] transition-colors duration-200">

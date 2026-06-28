@@ -7,6 +7,9 @@ import { Footer } from "../components/Footer";
 import { motion } from "motion/react";
 import { ChevronDown } from "lucide-react";
 
+const BG = "#0D0D0D";
+const CARD_BG = "#1A1A1A";
+
 const SORT_OPTIONS = [
   { label: "Latest",              value: "latest" },
   { label: "Price: Low to High", value: "price-asc" },
@@ -29,17 +32,18 @@ function ProductCard({ product }: { product: NonFoodProduct }) {
   return (
     <motion.div
       layout
-      className="group bg-card rounded-2xl overflow-hidden border border-[#3d1c0a]/10 hover:shadow-xl transition-shadow duration-300 flex flex-col"
+      className="group rounded-2xl overflow-hidden border border-white/8 hover:border-[#C8A040]/40 hover:shadow-xl hover:shadow-black/40 transition-all duration-300 flex flex-col"
+      style={{ background: CARD_BG }}
     >
-      <div className="relative overflow-hidden aspect-square bg-[#ecddc8]">
+      <div className="relative overflow-hidden aspect-square bg-[#111]">
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          className="w-full h-full object-cover group-hover:scale-[1.15] transition-transform duration-500"
         />
         {product.tag && (
           <span
-            className="absolute top-3 left-3 bg-[#C8A040] text-[#fdf6ee] px-2 py-0.5 text-xs uppercase tracking-widest"
+            className="absolute top-3 left-3 bg-[#C8A040] text-[#0D0D0D] px-2 py-0.5 text-xs uppercase tracking-widest"
             style={{ fontFamily: "'DM Mono', monospace" }}
           >
             {product.tag}
@@ -54,13 +58,13 @@ function ProductCard({ product }: { product: NonFoodProduct }) {
           {product.category}
         </p>
         <h3
-          className="text-[#2c1810] mb-1"
+          className="text-[#fdf6ee] mb-1"
           style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, fontSize: "1rem" }}
         >
           {product.name}
         </h3>
         <p
-          className="text-[#7a5c44] text-sm mb-4 flex-1"
+          className="text-[#fdf6ee]/50 text-sm mb-4 flex-1"
           style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300, lineHeight: 1.6 }}
         >
           {product.description}
@@ -74,7 +78,7 @@ function ProductCard({ product }: { product: NonFoodProduct }) {
           </span>
           <button
             onClick={handleWhatsApp}
-            className="px-4 py-2 bg-[#0A0402] text-[#fdf6ee] text-xs uppercase tracking-wider hover:bg-[#C8A040] hover:text-[#0A0402] transition-colors duration-200"
+            className="px-4 py-2 bg-[#C8A040] text-[#0D0D0D] text-xs uppercase tracking-wider hover:bg-[#fdf6ee] transition-colors duration-200"
             style={{ fontFamily: "'Lato', sans-serif", fontWeight: 700 }}
           >
             Order
@@ -114,64 +118,70 @@ export default function AllNonFoodPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
       >
-        <div className="min-h-screen bg-[#FAF4EA] pt-36 pb-20">
-          <div className="max-w-7xl mx-auto px-6">
+        <div className="min-h-screen pt-36 pb-20" style={{ background: BG }}>
 
-            {/* Header */}
-            <div className="text-center mb-12">
-              <p
-                className="text-[#C8A040] text-xs uppercase tracking-widest mb-3"
-                style={{ fontFamily: "'DM Mono', monospace" }}
-              >
-                Beyond Chocolate
-              </p>
-              <h1
-                className="text-[#1C0E06] mb-4"
-                style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 700 }}
-              >
-                Non-Food Products
-              </h1>
-              <p
-                className="text-[#7A5430] max-w-2xl mx-auto"
-                style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300, lineHeight: 1.75 }}
-              >
-                Discover our range of cocoa-based skincare and wellness products — harnessing the natural power of Malaysian cacao.
-              </p>
-            </div>
+          {/* Header */}
+          <div className="text-center mb-12 px-6">
+            <p
+              className="text-[#C8A040] text-xs uppercase tracking-widest mb-3"
+              style={{ fontFamily: "'DM Mono', monospace" }}
+            >
+              Beyond Chocolate
+            </p>
+            <h1
+              className="text-[#fdf6ee] mb-4"
+              style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 700 }}
+            >
+              Non-Food Products
+            </h1>
+            <p
+              className="text-[#fdf6ee]/50 mx-auto whitespace-nowrap"
+              style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300, lineHeight: 1.75 }}
+            >
+              Discover our cocoa-based skincare and wellness products, harnessing the natural power of Malaysian cacao.
+            </p>
+            <div className="w-16 h-0.5 bg-[#C8A040] mx-auto mt-4" />
+          </div>
 
-            {/* Search + Sort */}
-            <div className="flex flex-col sm:flex-row gap-3 mb-10">
+          {/* Sticky Search + Sort */}
+          <div
+            className="sticky top-36 z-20 border-b border-white/8 pt-2 pb-3 mb-8"
+            style={{ background: BG, boxShadow: `0 -20px 0 20px ${BG}, 0 2px 8px rgba(0,0,0,0.4)` }}
+          >
+            <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row gap-3">
               <input
-                className="flex-1 px-4 py-3 rounded-sm border border-[#1C0E06]/10 bg-white text-[#1C0E06] placeholder-[#7A5430]/50 focus:outline-none focus:border-[#C8A040] transition-colors"
+                className="flex-1 px-4 py-3 border border-white/10 text-[#fdf6ee] placeholder-[#fdf6ee]/30 focus:outline-none focus:border-[#C8A040] transition-colors"
+                style={{ background: CARD_BG, fontFamily: "'Lato', sans-serif" }}
                 placeholder="Search products..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                style={{ fontFamily: "'Lato', sans-serif" }}
               />
-
               <div className="relative">
                 <button
                   onClick={() => setSortOpen((v) => !v)}
-                  className="w-full sm:w-52 flex items-center justify-between gap-2 px-4 py-3 rounded-sm border border-[#1C0E06]/10 bg-white text-[#1C0E06] text-sm hover:border-[#C8A040] transition-colors"
-                  style={{ fontFamily: "'Lato', sans-serif" }}
+                  className="w-full sm:w-52 flex items-center justify-between gap-2 px-4 py-3 border border-white/10 text-[#fdf6ee] text-sm hover:border-[#C8A040] transition-colors"
+                  style={{ background: CARD_BG, fontFamily: "'Lato', sans-serif" }}
                 >
                   <span>{currentSort.label}</span>
                   <ChevronDown size={15} className={`text-[#C8A040] transition-transform duration-200 ${sortOpen ? "rotate-180" : ""}`} />
                 </button>
                 {sortOpen && (
-                  <div className="absolute right-0 mt-1 w-52 bg-white border border-[#1C0E06]/10 shadow-xl z-20 rounded-sm overflow-hidden">
+                  <div
+                    className="absolute right-0 mt-1 w-52 border border-white/10 shadow-2xl z-30 overflow-hidden"
+                    style={{ background: "#1A1A1A" }}
+                  >
                     {SORT_OPTIONS.map((opt) => (
                       <button
                         key={opt.value}
                         onClick={() => { setSortBy(opt.value); setSortOpen(false); }}
                         className={`w-full text-left px-4 py-3 text-sm transition-colors duration-150 ${
                           sortBy === opt.value
-                            ? "bg-[#0A0402] text-[#FAF4EA]"
-                            : "text-[#1C0E06] hover:bg-[#FAF4EA] hover:text-[#C8A040]"
+                            ? "bg-[#C8A040] text-[#0D0D0D]"
+                            : "text-[#fdf6ee]/70 hover:bg-white/5 hover:text-[#C8A040]"
                         }`}
                         style={{ fontFamily: "'Lato', sans-serif" }}
                       >
-                        {opt.value === sortBy && <span className="mr-2 text-[#C8A040]">✓</span>}
+                        {opt.value === sortBy && <span className="mr-2">✓</span>}
                         {opt.label}
                       </button>
                     ))}
@@ -179,8 +189,10 @@ export default function AllNonFoodPage() {
                 )}
               </div>
             </div>
+          </div>
 
-            {/* Grid */}
+          {/* Grid */}
+          <div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
               {displayedProducts.map((product) => (
                 <ProductCard key={product.id} product={product} />
@@ -188,7 +200,7 @@ export default function AllNonFoodPage() {
             </div>
 
             {displayedProducts.length === 0 && (
-              <p className="mt-10 text-center text-[#7A5430]" style={{ fontFamily: "'Lato', sans-serif" }}>
+              <p className="mt-10 text-center text-[#fdf6ee]/40" style={{ fontFamily: "'Lato', sans-serif" }}>
                 No products found. Try a different search term.
               </p>
             )}

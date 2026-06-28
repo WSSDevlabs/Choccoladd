@@ -21,7 +21,7 @@ export const products: Product[] = [
   },
   {
     id: 2,
-    name: "Panning Chocolates Almond, 40g",
+    name: "Panning Chocolates Almond",
     price: "RM 9.50",
     description: "Roasted almonds enrobed in smooth panning chocolate. A satisfying crunch with rich cocoa flavour. 8 units per pack, 40g each.",
     image: "/images/products/panning-almond-chocolates.jpg",
@@ -30,7 +30,7 @@ export const products: Product[] = [
   },
   {
     id: 3,
-    name: "Keto Coffee Chocolates, 80% Cocoa",
+    name: "Keto Coffee Chocolates",
     price: "RM 18.00",
     description: "Dark 80% cocoa chocolates infused with real coffee. A keto-friendly treat for coffee and chocolate lovers.",
     image: "/images/products/keto-coffee-chocolates.jpg",
@@ -39,7 +39,7 @@ export const products: Product[] = [
   },
   {
     id: 4,
-    name: "Keto Chocolates Seasalt, 80% Cocoa",
+    name: "Keto Chocolates Seasalt",
     price: "RM 18.00",
     description: "Dark 80% cocoa chocolates with a delicate touch of sea salt. Keto-friendly and intensely satisfying.",
     image: "/images/products/keto-seasalt-chocolates.jpg",
@@ -77,7 +77,7 @@ export const products: Product[] = [
   },
   {
     id: 8,
-    name: "Cocoa With Coconut Sugar Drinks Powder, 8 Sachet",
+    name: "Cocoa With Coconut Sugar Drinks Powder",
     price: "RM 35.00",
     description: "Cocoa drink sweetened with coconut sugar for a wholesome, lower-GI indulgence. 8 sachets per pack, 50g each.",
     image: "/images/products/cocoa-coconut-sugar-drink.jpg",
@@ -86,7 +86,7 @@ export const products: Product[] = [
   },
   {
     id: 9,
-    name: "Cocoa With Tongkat Ali Drinks Powder, 8 Sachet",
+    name: "Cocoa With Tongkat Ali Drinks Powder",
     price: "RM 35.00",
     description: "Cocoa drink enriched with Tongkat Ali, known for natural energy and vitality. 8 sachets per pack, 50g each.",
     image: "/images/products/cocoa-tongkat-ali-drink.jpg",
@@ -95,7 +95,7 @@ export const products: Product[] = [
   },
   {
     id: 10,
-    name: "Cocoa With Kacip Fatimah Drinks Powder, 8 Sachet",
+    name: "Cocoa With Kacip Fatimah Drinks Powder",
     price: "RM 35.00",
     description: "Cocoa drink blended with Kacip Fatimah, a traditional herb prized for women's wellness. 8 sachets per pack, 50g each.",
     image: "/images/products/cocoa-kacip-fatimah-drink.jpg",

@@ -99,7 +99,7 @@ export function GiftSets() {
   const router = useRouter();
 
   return (
-    <section id="gift-sets" className="py-24" style={{ background: "#3D1A07", borderRadius: "3rem" }}>
+    <section id="gift-sets" className="py-14" style={{ background: "#3D1A07", borderRadius: "3rem 3rem 0 0" }}>
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">

@@ -19,7 +19,7 @@ const exclusiveItems = [
 
 export function InStoreExclusive() {
   return (
-    <section className="py-12" style={{ background: "#fdf6ee" }}>
+    <section className="py-8" style={{ background: "#0D0D0D" }}>
       <div className="max-w-5xl mx-auto px-6">
         {/* Header */}
         <motion.div
@@ -30,7 +30,7 @@ export function InStoreExclusive() {
           className="text-center mb-10"
         >
           <h2
-            className="text-[#2C1206]"
+            className="text-[#fdf6ee]"
             style={{
               fontFamily: "'Playfair Display', serif",
               fontSize: "clamp(1.8rem, 4vw, 2.8rem)",
@@ -54,7 +54,7 @@ export function InStoreExclusive() {
               transition={{ duration: 0.75, delay: i * 0.15, ease: [0.22, 1, 0.36, 1] }}
               className="flex flex-col items-center text-center group"
             >
-              <div className="w-full aspect-square overflow-hidden rounded-xl border border-[#C8A040]/30 group-hover:border-[#C8A040]/70 transition-all duration-300 mb-4 bg-[#3D1A07]">
+              <div className="w-full aspect-square overflow-hidden rounded-xl border border-white/10 group-hover:border-[#C8A040]/60 transition-all duration-300 mb-4" style={{ background: "#1A1A1A" }}>
                 <img
                   src={item.image}
                   alt={item.name}
@@ -63,14 +63,14 @@ export function InStoreExclusive() {
               </div>
 
               <h3
-                className="text-[#2C1206] uppercase tracking-widest text-sm mb-1.5"
+                className="text-[#fdf6ee] uppercase tracking-widest text-sm mb-1.5"
                 style={{ fontFamily: "'Lato', sans-serif", fontWeight: 700 }}
               >
                 {item.name}
               </h3>
 
               <p
-                className="text-[#2C1206]/50 text-xs leading-relaxed"
+                className="text-[#fdf6ee]/40 text-xs leading-relaxed"
                 style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300 }}
               >
                 {item.description}
