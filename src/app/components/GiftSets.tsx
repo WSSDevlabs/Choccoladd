@@ -116,7 +116,7 @@ export function GiftSets() {
             Gift Sets
           </h2>
           <p
-            className="text-[#fdf6ee]/60 mx-auto whitespace-nowrap"
+            className="text-[#fdf6ee]/60 mx-auto text-center max-w-xl"
             style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300, fontSize: "1rem" }}
           >
             The perfect gift for every occasion: birthdays, weddings, corporate events, or simply to show someone you care.

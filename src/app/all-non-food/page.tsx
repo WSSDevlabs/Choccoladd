@@ -135,7 +135,7 @@ export default function AllNonFoodPage() {
               Non-Food Products
             </h1>
             <p
-              className="text-[#fdf6ee]/50 mx-auto whitespace-nowrap"
+              className="text-[#fdf6ee]/50 mx-auto text-center max-w-xl"
               style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300, lineHeight: 1.75 }}
             >
               Discover our cocoa-based skincare and wellness products, harnessing the natural power of Malaysian cacao.

@@ -26,7 +26,7 @@ export default function App() {
 
   return (
     <div
-      className="min-h-screen"
+      className="min-h-screen overflow-x-hidden"
       style={{ fontFamily: "'Lato', sans-serif" }}
     >
       <Navbar />
