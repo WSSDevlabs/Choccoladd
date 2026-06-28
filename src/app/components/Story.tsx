@@ -26,7 +26,7 @@ export function Story() {
             <div className="relative rounded-sm overflow-hidden aspect-[4/5]">
               <img
                 src="/images/general/OurStorybg3.png"
-                alt="Our Story"
+                alt="Choccoladd story — handcrafting premium chocolates from authentic Malaysian cacao"
                 className="w-full h-full object-cover object-center"
               />
             </div>

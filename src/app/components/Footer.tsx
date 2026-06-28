@@ -60,10 +60,10 @@ export function Footer() {
             <div className="flex flex-wrap items-center gap-3 max-w-full">
               <img src="/images/logo/LogoChoccoladd.png" alt="Choccoladd" className="h-16 w-auto object-contain flex-shrink-0" />
               <div className="h-16 w-16 flex-shrink-0 rounded-full bg-white flex items-center justify-center p-1.5" style={{ minWidth: "4rem" }}>
-                <img src="/images/logo/LogoNBG.png" alt="Newbox Greens" className="h-full w-full object-contain" />
+                <img src="/images/logo/LogoNBG.png" alt="Newbox Greens Ventures — Choccoladd parent company" className="h-full w-full object-contain" />
               </div>
               <div className="h-16 w-16 flex-shrink-0 rounded-full bg-white flex items-center justify-center p-1.5" style={{ minWidth: "4rem" }}>
-                <img src="/images/logo/LogoLKM.png" alt="LKM" className="h-full w-full object-contain" />
+                <img src="/images/logo/LogoLKM.png" alt="Lembaga Koko Malaysia — in collaboration with Choccoladd" className="h-full w-full object-contain" />
               </div>
             </div>
           </div>

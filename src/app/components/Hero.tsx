@@ -126,7 +126,7 @@ export function Hero() {
             {/* Image */}
             <img
               src={heroIcon}
-              alt="Featured product"
+              alt="Choccoladd handcrafted Malaysian cocoa chocolate"
               className="absolute inset-5 rounded-full object-cover"
               style={{ width: "calc(100% - 2.5rem)", height: "calc(100% - 2.5rem)" }}
             />
