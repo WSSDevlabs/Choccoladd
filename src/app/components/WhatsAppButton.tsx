@@ -35,7 +35,7 @@ export function WhatsAppButton() {
               </button>
             </div>
             <p
-              className="text-[#7a5c44] text-xs"
+              className="text-[#5C3E22] text-xs"
               style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300, lineHeight: 1.6 }}
             >
               Order chocolates or ask about gift sets. We reply fast!

@@ -23,7 +23,7 @@ export function Hero() {
       }}
     >
       {/* Gradient overlay — darker at top, lighter towards bottom */}
-      <div className="absolute inset-0 pointer-events-none" style={{ background: "linear-gradient(to bottom, rgba(26,8,2,0.85) 0%, rgba(26,8,2,0.55) 50%, rgba(26,8,2,0.35) 100%)" }} />
+      <div className="absolute inset-0 pointer-events-none" style={{ background: "linear-gradient(to bottom, rgba(26,8,2,0.88) 0%, rgba(26,8,2,0.75) 50%, rgba(26,8,2,0.6) 100%)" }} />
       {/* Decorative glow circles — slow pulse */}
       <motion.div animate={{ scale: [1, 1.18, 1], opacity: [0.15, 0.07, 0.15] }} transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }} className="absolute top-20 right-10 w-80 h-80 rounded-full bg-[#C8A040]/15 blur-3xl pointer-events-none" />
       <motion.div animate={{ scale: [1, 1.22, 1], opacity: [0.10, 0.04, 0.10] }} transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }} className="absolute bottom-20 left-1/4 w-64 h-64 rounded-full bg-[#C8A040]/10 blur-2xl pointer-events-none" />
@@ -63,7 +63,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.0, delay: 0.3 }}
-            className="text-[#fdf6ee]/80 mb-10 max-w-md drop-shadow"
+            className="text-[#fdf6ee]/95 mb-10 max-w-md drop-shadow-md"
             style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300, fontSize: "1.1rem", lineHeight: 1.75 }}
           >
             From handcrafted praline chocolates to nourishing herbal cocoa sachet drinks, every Choccoladd product brings the goodness of Malaysian cacao from farm to your hands.

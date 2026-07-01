@@ -125,7 +125,7 @@ export function LocationMap() {
                       <div className="flex items-start gap-2.5">
                         <MapPin size={13} className="text-[#C8A040] mt-0.5 flex-shrink-0" />
                         <p
-                          className="text-[#7A5430] text-xs leading-relaxed"
+                          className="text-[#5C3E22] text-xs leading-relaxed"
                           style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300 }}
                         >
                           {loc.address}
@@ -133,13 +133,13 @@ export function LocationMap() {
                       </div>
                       <div className="flex items-center gap-2.5">
                         <Mail size={13} className="text-[#C8A040] flex-shrink-0" />
-                        <p className="text-[#7A5430] text-xs" style={{ fontFamily: "'Lato', sans-serif" }}>
+                        <p className="text-[#5C3E22] text-xs" style={{ fontFamily: "'Lato', sans-serif" }}>
                           {loc.email}
                         </p>
                       </div>
                       <div className="flex items-center gap-2.5">
                         <Phone size={13} className="text-[#C8A040] flex-shrink-0" />
-                        <p className="text-[#7A5430] text-xs" style={{ fontFamily: "'Lato', sans-serif" }}>
+                        <p className="text-[#5C3E22] text-xs" style={{ fontFamily: "'Lato', sans-serif" }}>
                           {loc.phone}
                         </p>
                       </div>

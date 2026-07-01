@@ -1,7 +1,9 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import { products, type Product } from "../components/products-data";
+import { slugify } from "../components/slug";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { motion } from "motion/react";
@@ -31,19 +33,21 @@ function ProductCard({ product }: { product: Product }) {
       layout
       className="group bg-card rounded-2xl overflow-hidden border border-[#3d1c0a]/10 hover:shadow-xl transition-shadow duration-300 flex flex-col"
     >
-      <div className="relative overflow-hidden aspect-square bg-[#ecddc8]">
+      <Link href={`/products/${slugify(product.name)}`} className="relative overflow-hidden aspect-square bg-[#ecddc8] block">
         <img src={product.image} alt={product.name} className="w-full h-full object-cover group-hover:scale-[1.15] transition-transform duration-500" />
         {product.tag && (
           <span className="absolute top-3 left-3 bg-[#C8A040] text-[#fdf6ee] px-2 py-0.5 text-xs uppercase tracking-widest" style={{ fontFamily: "'DM Mono', monospace" }}>
             {product.tag}
           </span>
         )}
-      </div>
+      </Link>
       <div className="p-3 sm:p-5 flex flex-col flex-1">
-        <h3 className="text-[#2c1810] mb-1" style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, fontSize: "1rem" }}>
-          {product.name}
-        </h3>
-        <p className="text-[#7a5c44] text-sm mb-4 flex-1" style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300, lineHeight: 1.6 }}>
+        <Link href={`/products/${slugify(product.name)}`}>
+          <h3 className="text-[#2c1810] mb-1 hover:text-[#C8A040] transition-colors" style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, fontSize: "1rem" }}>
+            {product.name}
+          </h3>
+        </Link>
+        <p className="text-[#5C3E22] text-sm mb-4 flex-1" style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300, lineHeight: 1.6 }}>
           {product.description}
         </p>
         <div className="flex items-center justify-between">
@@ -101,13 +105,13 @@ export default function AllProductsPage() {
             <h1 className="text-[#1C0E06] mb-4" style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 700 }}>
               All Products
             </h1>
-            <p className="text-[#7A5430] max-w-2xl mx-auto" style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300, lineHeight: 1.75 }}>
+            <p className="text-[#5C3E22] max-w-2xl mx-auto" style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300, lineHeight: 1.75 }}>
               Browse every item in our handcrafted collection and search for your favourite chocolate treat.
             </p>
           </div>
 
           {/* Sticky Search + Sort */}
-          <div className="sticky top-24 sm:top-36 z-20 bg-[#FAF4EA] border-b border-[#1C0E06]/10 pt-2 pb-3 px-6 mb-8" style={{ boxShadow: '0 -40px 0 40px #FAF4EA, 0 2px 6px rgba(0,0,0,0.06)' }}>
+          <div className="sticky top-24 sm:top-36 z-20 bg-[#FAF4EA] border-b border-[#1C0E06]/10 pt-2 pb-3 px-6 mb-8" style={{ boxShadow: '0 -20px 0 20px #FAF4EA, 0 2px 6px rgba(0,0,0,0.06)' }}>
           <div className="max-w-7xl mx-auto flex flex-col sm:flex-row gap-3">
             {/* Search */}
             <input
@@ -160,7 +164,7 @@ export default function AllProductsPage() {
             </div>
 
             {displayedProducts.length === 0 && (
-              <p className="mt-10 text-center text-[#7A5430]" style={{ fontFamily: "'Lato', sans-serif" }}>
+              <p className="mt-10 text-center text-[#5C3E22]" style={{ fontFamily: "'Lato', sans-serif" }}>
                 No products found. Try a different search term.
               </p>
             )}

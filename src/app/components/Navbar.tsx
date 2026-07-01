@@ -42,11 +42,11 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
       {/* Black announcement bar */}
       <div className="hidden sm:flex items-center justify-center bg-[#0A0402] py-2 px-4 gap-4">
-        <p className="text-[#fdf6ee]/50 text-[9px] tracking-[0.18em] uppercase" style={{ fontFamily: "'DM Mono', monospace" }}>Handcrafted in Malaysia</p>
+        <p className="text-[#fdf6ee]/75 text-[9px] tracking-[0.18em] uppercase" style={{ fontFamily: "'DM Mono', monospace" }}>Handcrafted in Malaysia</p>
         <span className="text-[#C8A040]/40 text-[9px]">·</span>
         <p className="text-[#C8A040] text-[10px] tracking-[0.22em] uppercase" style={{ fontFamily: "'DM Mono', monospace" }}>In Collaboration with Lembaga Koko Malaysia</p>
         <span className="text-[#C8A040]/40 text-[9px]">·</span>
-        <p className="text-[#fdf6ee]/50 text-[9px] tracking-[0.18em] uppercase" style={{ fontFamily: "'DM Mono', monospace" }}>100% Natural Cacao</p>
+        <p className="text-[#fdf6ee]/75 text-[9px] tracking-[0.18em] uppercase" style={{ fontFamily: "'DM Mono', monospace" }}>100% Natural Cacao</p>
       </div>
 
       {/* Main navbar */}

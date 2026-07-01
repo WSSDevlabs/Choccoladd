@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-label="Placeholder image">
-  <rect width="640" height="640" rx="32" fill="#ecddc8" />
-  <g fill="#7a5c44" opacity="0.85">
-    <rect x="112" y="160" width="416" height="320" rx="24" fill="#f5e6d3" />
-    <path d="M176 240h288M176 296h288M176 352h176" stroke="#7a5c44" stroke-width="24" stroke-linecap="round" />
-  </g>
-  <text x="320" y="540" text-anchor="middle" fill="#7a5c44" font-family="Lato, sans-serif" font-size="40" font-weight="700">Image coming soon</text>
-</svg>

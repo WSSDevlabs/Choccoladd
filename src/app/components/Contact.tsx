@@ -86,7 +86,7 @@ export function Contact() {
               <em style={{ color: "#C8A040", fontStyle: "italic" }}>Made with Passion</em>
             </h3>
             <p
-              className="text-[#fdf6ee]/50 text-sm mb-10"
+              className="text-[#fdf6ee]/75 text-sm mb-10"
               style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300, lineHeight: 1.85 }}
             >
               Have a question, want to place a bulk order, or plan a custom gift? Reach out to us and we will get back to you swiftly.
@@ -109,7 +109,7 @@ export function Contact() {
                   </div>
                   <div>
                     <p
-                      className="text-[#fdf6ee]/40 text-[10px] uppercase tracking-widest mb-0.5"
+                      className="text-[#fdf6ee]/65 text-[10px] uppercase tracking-widest mb-0.5"
                       style={{ fontFamily: "'DM Mono', monospace" }}
                     >
                       {label}
@@ -128,7 +128,7 @@ export function Contact() {
             {/* Social icons */}
             <div className="mt-auto">
               <p
-                className="text-[#fdf6ee]/40 text-[10px] uppercase tracking-widest mb-3"
+                className="text-[#fdf6ee]/65 text-[10px] uppercase tracking-widest mb-3"
                 style={{ fontFamily: "'DM Mono', monospace" }}
               >
                 Social Media

@@ -38,7 +38,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-[#0A0402] text-[#fdf6ee]/60 py-12">
+    <footer className="bg-[#0A0402] text-[#fdf6ee]/80 py-12">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_2fr] gap-10 mb-10">
 

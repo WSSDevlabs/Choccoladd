@@ -60,7 +60,7 @@ function PillarCard({ pillar, index }: { pillar: typeof pillars[0]; index: numbe
         {pillar.title}
       </h3>
       <div className="w-10 h-px bg-[#C8A040]/40 mb-5" />
-      <p className="text-[#fdf6ee]/55 text-sm flex-1" style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300, lineHeight: 1.85 }}>
+      <p className="text-[#fdf6ee]/75 text-sm flex-1" style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300, lineHeight: 1.85 }}>
         {pillar.body}
       </p>
     </motion.div>

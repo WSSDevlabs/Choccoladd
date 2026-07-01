@@ -1,11 +1,13 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import { Gift, Heart, Star, Package, Sparkles, ChevronDown } from "lucide-react";
 import { motion } from "motion/react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { giftSets, type GiftSet } from "../components/gift-sets-data";
+import { slugify } from "../components/slug";
 import type { LucideIcon } from "lucide-react";
 
 const iconMap: Record<string, LucideIcon> = { Gift, Heart, Star, Package, Sparkles };
@@ -36,7 +38,7 @@ function GiftCard({ set }: { set: GiftSet }) {
       layout
       className="group flex flex-col bg-[#2C1206]/70 rounded-2xl border border-[#C8A040]/20 overflow-hidden hover:border-[#C8A040]/50 transition-all duration-300"
     >
-      <div className="relative aspect-square overflow-hidden bg-[#2c1810]">
+      <Link href={`/gift-sets/${slugify(set.name)}`} className="relative aspect-square overflow-hidden bg-[#2c1810] block">
         <img
           src={set.image}
           alt={set.name}
@@ -55,17 +57,19 @@ function GiftCard({ set }: { set: GiftSet }) {
         >
           {set.occasion}
         </span>
-      </div>
+      </Link>
 
       <div className="p-3 sm:p-6 flex flex-col flex-1">
-        <h3
-          className="text-[#fdf6ee] mb-2"
-          style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, fontSize: "1.15rem" }}
-        >
-          {set.name}
-        </h3>
+        <Link href={`/gift-sets/${slugify(set.name)}`}>
+          <h3
+            className="text-[#fdf6ee] mb-2 hover:text-[#C8A040] transition-colors"
+            style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, fontSize: "1.15rem" }}
+          >
+            {set.name}
+          </h3>
+        </Link>
         <p
-          className="text-[#fdf6ee]/60 text-sm mb-5 flex-1"
+          className="text-[#fdf6ee]/75 text-sm mb-5 flex-1"
           style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300, lineHeight: 1.7 }}
         >
           {set.description}
@@ -136,7 +140,7 @@ export default function AllGiftSetsPage() {
               All Gift Sets
             </h1>
             <p
-              className="text-[#fdf6ee]/60 max-w-2xl mx-auto"
+              className="text-[#fdf6ee]/80 max-w-2xl mx-auto"
               style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300, lineHeight: 1.75 }}
             >
               The perfect gift for every occasion. Browse our complete collection of handcrafted gift sets.
@@ -145,7 +149,7 @@ export default function AllGiftSetsPage() {
           </div>
 
           {/* Sticky Search + Sort */}
-          <div className="sticky top-24 sm:top-36 z-20 border-b border-[#C8A040]/10 pt-2 pb-3 mb-8" style={{ background: "#1A0802", boxShadow: '0 -40px 0 40px #1A0802, 0 2px 6px rgba(0,0,0,0.2)' }}>
+          <div className="sticky top-24 sm:top-36 z-20 border-b border-[#C8A040]/10 pt-2 pb-3 mb-8" style={{ background: "#1A0802", boxShadow: '0 -20px 0 20px #1A0802, 0 2px 6px rgba(0,0,0,0.2)' }}>
             <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row gap-3">
               <input
                 className="flex-1 px-4 py-3 border border-[#C8A040]/30 bg-[#2C1206]/50 text-[#fdf6ee] placeholder-[#fdf6ee]/30 focus:outline-none focus:border-[#C8A040] transition-colors"
@@ -196,7 +200,7 @@ export default function AllGiftSetsPage() {
 
             {displayed.length === 0 && (
               <p
-                className="mt-10 text-center text-[#fdf6ee]/40"
+                className="mt-10 text-center text-[#fdf6ee]/65"
                 style={{ fontFamily: "'Lato', sans-serif" }}
               >
                 No gift sets found. Try a different search term.

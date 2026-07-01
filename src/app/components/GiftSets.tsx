@@ -3,7 +3,9 @@
 import { motion, useMotionValue, useTransform, useSpring } from "motion/react";
 import { Gift, Heart, Star, Package, Sparkles } from "lucide-react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { giftSets } from "./gift-sets-data";
+import { slugify } from "./slug";
 import type { LucideIcon } from "lucide-react";
 
 const iconMap: Record<string, LucideIcon> = { Gift, Heart, Star, Package, Sparkles };
@@ -41,7 +43,7 @@ function GiftSetCard({ set, index }: { set: GiftSet; index: number }) {
       className="group flex flex-col bg-[#2C1206]/70 rounded-2xl border border-[#C8A040]/20 overflow-hidden hover:border-[#C8A040]/50 hover:shadow-2xl hover:shadow-[#C8A040]/10 transition-all duration-300"
     >
       {/* Image */}
-      <div className="relative aspect-square overflow-hidden bg-[#2c1810]">
+      <Link href={`/gift-sets/${slugify(set.name)}`} className="relative aspect-square overflow-hidden bg-[#2c1810] block">
         <img
           src={set.image}
           alt={set.name}
@@ -54,21 +56,23 @@ function GiftSetCard({ set, index }: { set: GiftSet; index: number }) {
         >
           <Icon size={18} className="text-[#fdf6ee]" />
         </div>
-      </div>
+      </Link>
 
       {/* Content */}
       <div className="p-3 sm:p-6 flex flex-col flex-1">
         {/* Fixed-height title so descriptions all start at the same line */}
-        <h3
-          className="text-[#fdf6ee] mb-3 min-h-[3.5rem]"
-          style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, fontSize: "1.15rem", lineHeight: 1.4 }}
-        >
-          {set.name}
-        </h3>
+        <Link href={`/gift-sets/${slugify(set.name)}`}>
+          <h3
+            className="text-[#fdf6ee] mb-3 min-h-[3.5rem] hover:text-[#C8A040] transition-colors"
+            style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, fontSize: "1.15rem", lineHeight: 1.4 }}
+          >
+            {set.name}
+          </h3>
+        </Link>
 
         {/* Description fills remaining space, pushing price+button to bottom */}
         <p
-          className="text-[#fdf6ee]/60 text-sm flex-1 mb-5"
+          className="text-[#fdf6ee]/75 text-sm flex-1 mb-5"
           style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300, lineHeight: 1.7 }}
         >
           {set.description}
@@ -116,7 +120,7 @@ export function GiftSets() {
             Gift Sets
           </h2>
           <p
-            className="text-[#fdf6ee]/60 mx-auto text-center max-w-xl"
+            className="text-[#fdf6ee]/80 mx-auto text-center max-w-xl"
             style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300, fontSize: "1rem" }}
           >
             The perfect gift for every occasion: birthdays, weddings, corporate events, or simply to show someone you care.

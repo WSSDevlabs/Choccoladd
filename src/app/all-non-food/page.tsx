@@ -1,7 +1,9 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import { nonFoodProducts, type NonFoodProduct } from "../components/non-food-data";
+import { slugify } from "../components/slug";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { motion } from "motion/react";
@@ -35,7 +37,7 @@ function ProductCard({ product }: { product: NonFoodProduct }) {
       className="group rounded-2xl overflow-hidden border border-white/8 hover:border-[#C8A040]/40 hover:shadow-xl hover:shadow-black/40 transition-all duration-300 flex flex-col"
       style={{ background: CARD_BG }}
     >
-      <div className="relative overflow-hidden aspect-square bg-[#111]">
+      <Link href={`/non-food/${slugify(product.name)}`} className="relative overflow-hidden aspect-square bg-[#111] block">
         <img
           src={product.image}
           alt={product.name}
@@ -49,7 +51,7 @@ function ProductCard({ product }: { product: NonFoodProduct }) {
             {product.tag}
           </span>
         )}
-      </div>
+      </Link>
       <div className="p-3 sm:p-5 flex flex-col flex-1">
         <p
           className="text-[#C8A040] text-[10px] uppercase tracking-widest mb-1"
@@ -57,14 +59,16 @@ function ProductCard({ product }: { product: NonFoodProduct }) {
         >
           {product.category}
         </p>
-        <h3
-          className="text-[#fdf6ee] mb-1"
-          style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, fontSize: "1rem" }}
-        >
-          {product.name}
-        </h3>
+        <Link href={`/non-food/${slugify(product.name)}`}>
+          <h3
+            className="text-[#fdf6ee] mb-1 hover:text-[#C8A040] transition-colors"
+            style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, fontSize: "1rem" }}
+          >
+            {product.name}
+          </h3>
+        </Link>
         <p
-          className="text-[#fdf6ee]/50 text-sm mb-4 flex-1"
+          className="text-[#fdf6ee]/75 text-sm mb-4 flex-1"
           style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300, lineHeight: 1.6 }}
         >
           {product.description}
@@ -135,7 +139,7 @@ export default function AllNonFoodPage() {
               Non-Food Products
             </h1>
             <p
-              className="text-[#fdf6ee]/50 mx-auto text-center max-w-xl"
+              className="text-[#fdf6ee]/80 mx-auto text-center max-w-xl"
               style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300, lineHeight: 1.75 }}
             >
               Discover our cocoa-based skincare and wellness products, harnessing the natural power of Malaysian cacao.
@@ -200,7 +204,7 @@ export default function AllNonFoodPage() {
             </div>
 
             {displayedProducts.length === 0 && (
-              <p className="mt-10 text-center text-[#fdf6ee]/40" style={{ fontFamily: "'Lato', sans-serif" }}>
+              <p className="mt-10 text-center text-[#fdf6ee]/65" style={{ fontFamily: "'Lato', sans-serif" }}>
                 No products found. Try a different search term.
               </p>
             )}

@@ -77,13 +77,13 @@ export function Story() {
               Our Story
             </h2>
             <p
-              className="text-[#7a5c44] mb-5"
+              className="text-[#5C3E22] mb-5"
               style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300, fontSize: "1rem", lineHeight: 1.85 }}
             >
               Choccoladd began with a friendship. In 2010, Sufeil and Harun crossed paths as work colleagues, spending countless hours in cafés brainstorming ideas, from cloud storage platforms to the next big thing in tech. Though life took them on different paths, their bond and shared ambition never faded.
             </p>
             <p
-              className="text-[#7a5c44] mb-10"
+              className="text-[#5C3E22] mb-10"
               style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300, fontSize: "1rem", lineHeight: 1.85 }}
             >
               In 2024, when Harun began exploring his mother's land for a commercial venture, Sufeil pitched idea after idea. One visit to a high-end chocolate gallery sparked everything. The discovery of single-origin cocoa showed them how a humble bean could carry both social impact and business potential. That moment became the seed of Newbox Greens Ventures and its brand, Choccoladd.

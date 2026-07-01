@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "motion/react";
 import { products } from "./products-data";
+import { slugify } from "./slug";
 
 const featuredProducts = products.slice(0, 4);
 
@@ -22,7 +23,7 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
       transition={{ duration: 0.85, delay: index * 0.15, ease: [0.22, 1, 0.36, 1] }}
       className="group bg-card rounded-2xl overflow-hidden border border-[#3d1c0a]/10 hover:shadow-xl hover:shadow-[#C8A040]/10 transition-shadow duration-300 flex flex-col"
     >
-      <div className="relative overflow-hidden aspect-square bg-[#ecddc8]">
+      <Link href={`/products/${slugify(product.name)}`} className="relative overflow-hidden aspect-square bg-[#ecddc8] block">
         <img
           src={product.image}
           alt={product.name}
@@ -36,16 +37,18 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
             {product.tag}
           </span>
         )}
-      </div>
+      </Link>
       <div className="p-3 sm:p-5 flex flex-col flex-1">
-        <h3
-          className="text-[#2c1810] mb-1 min-h-[2.75rem]"
-          style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, fontSize: "1rem", lineHeight: 1.4 }}
-        >
-          {product.name}
-        </h3>
+        <Link href={`/products/${slugify(product.name)}`}>
+          <h3
+            className="text-[#2c1810] mb-1 min-h-[2.75rem] hover:text-[#C8A040] transition-colors"
+            style={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, fontSize: "1rem", lineHeight: 1.4 }}
+          >
+            {product.name}
+          </h3>
+        </Link>
         <p
-          className="text-[#7a5c44] text-sm mb-4 flex-1"
+          className="text-[#5C3E22] text-sm mb-4 flex-1"
           style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300, lineHeight: 1.6 }}
         >
           {product.description}

@@ -70,7 +70,7 @@ export function InStoreExclusive() {
               </h3>
 
               <p
-                className="text-[#fdf6ee]/40 text-xs leading-relaxed"
+                className="text-[#fdf6ee]/65 text-xs leading-relaxed"
                 style={{ fontFamily: "'Lato', sans-serif", fontWeight: 300 }}
               >
                 {item.description}
