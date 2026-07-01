@@ -1,10 +1,12 @@
+const isDev = process.env.NODE_ENV === "development";
+
 const ContentSecurityPolicy = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline'",
+  `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}`,
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "font-src 'self' https://fonts.gstatic.com data:",
   "img-src 'self' data: https://*.basemaps.cartocdn.com",
-  "connect-src 'self' https://api.web3forms.com https://*.basemaps.cartocdn.com",
+  `connect-src 'self' https://api.web3forms.com https://*.basemaps.cartocdn.com${isDev ? " ws://localhost:* http://localhost:*" : ""}`,
   "frame-src 'none'",
   "object-src 'none'",
   "base-uri 'self'",
