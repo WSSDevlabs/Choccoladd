@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "../styles/index.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://choccoladd.com"),
+  metadataBase: new URL("https://www.choccoladd.com"),
 
   title: {
     default: "Choccoladd | Premium Malaysian Cocoa Chocolates & Gift Sets",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     "Lembaga Koko Malaysia",
     "artisan chocolate Kuala Lumpur",
   ],
-  authors: [{ name: "Choccoladd", url: "https://choccoladd.com" }],
+  authors: [{ name: "Choccoladd", url: "https://www.choccoladd.com" }],
   creator: "Choccoladd",
   publisher: "Newbox Greens Ventures",
 
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_MY",
-    url: "https://choccoladd.com",
+    url: "https://www.choccoladd.com",
     siteName: "Choccoladd",
     title: "Choccoladd | Premium Malaysian Cocoa Chocolates & Gift Sets",
     description:
@@ -65,23 +65,23 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://choccoladd.com",
+    canonical: "https://www.choccoladd.com",
   },
 };
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://choccoladd.com",
+  "@id": "https://www.choccoladd.com",
   name: "Choccoladd",
   description:
     "Handcrafted premium chocolates from 100% authentic Malaysian cacao. Artisan chocolates, gift sets, wellness cocoa drinks and cocoa skincare.",
-  url: "https://choccoladd.com",
+  url: "https://www.choccoladd.com",
   telephone: "+60196319373",
   email: "sufeil.newboxgreens@gmail.com",
   priceRange: "RM9 – RM180",
-  image: "https://choccoladd.com/images/logo/LogoChoccoladd.png",
-  logo: "https://choccoladd.com/images/logo/LogoChoccoladd.png",
+  image: "https://www.choccoladd.com/images/logo/LogoChoccoladd.png",
+  logo: "https://www.choccoladd.com/images/logo/LogoChoccoladd.png",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Blok G2-0-7, Jalan 5/76 D, Desa Pandan",

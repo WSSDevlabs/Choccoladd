@@ -24,7 +24,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
 
   const title = set.name;
   const description = set.description;
-  const url = `https://choccoladd.com/gift-sets/${params.slug}`;
+  const url = `https://www.choccoladd.com/gift-sets/${params.slug}`;
 
   return {
     title,
@@ -49,7 +49,7 @@ export default function GiftSetDetailPage({ params }: { params: { slug: string }
   const set = getGiftSet(params.slug);
   if (!set) notFound();
 
-  const url = `https://choccoladd.com/gift-sets/${params.slug}`;
+  const url = `https://www.choccoladd.com/gift-sets/${params.slug}`;
   const whatsappText = encodeURIComponent(`Hi! I'm interested in the ${set.name} gift set (${set.price}). Please provide more details.`);
 
   const productSchema = {
@@ -57,7 +57,7 @@ export default function GiftSetDetailPage({ params }: { params: { slug: string }
     "@type": "Product",
     name: set.name,
     description: set.description,
-    image: `https://choccoladd.com${set.image}`,
+    image: `https://www.choccoladd.com${set.image}`,
     category: set.occasion,
     brand: { "@type": "Brand", name: "Choccoladd" },
     offers: {
@@ -73,8 +73,8 @@ export default function GiftSetDetailPage({ params }: { params: { slug: string }
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://choccoladd.com" },
-      { "@type": "ListItem", position: 2, name: "All Gift Sets", item: "https://choccoladd.com/all-gift-sets" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.choccoladd.com" },
+      { "@type": "ListItem", position: 2, name: "All Gift Sets", item: "https://www.choccoladd.com/all-gift-sets" },
       { "@type": "ListItem", position: 3, name: set.name, item: url },
     ],
   };

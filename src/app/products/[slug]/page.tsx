@@ -24,7 +24,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
 
   const title = product.name;
   const description = product.description;
-  const url = `https://choccoladd.com/products/${params.slug}`;
+  const url = `https://www.choccoladd.com/products/${params.slug}`;
 
   return {
     title,
@@ -49,7 +49,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
   const product = getProduct(params.slug);
   if (!product) notFound();
 
-  const url = `https://choccoladd.com/products/${params.slug}`;
+  const url = `https://www.choccoladd.com/products/${params.slug}`;
   const whatsappText = encodeURIComponent(`Hi! I'm interested in ordering: ${product.name} (${product.price})`);
 
   const productSchema = {
@@ -57,7 +57,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
     "@type": "Product",
     name: product.name,
     description: product.description,
-    image: `https://choccoladd.com${product.image}`,
+    image: `https://www.choccoladd.com${product.image}`,
     category: product.category,
     brand: { "@type": "Brand", name: "Choccoladd" },
     offers: {
@@ -73,8 +73,8 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://choccoladd.com" },
-      { "@type": "ListItem", position: 2, name: "All Products", item: "https://choccoladd.com/all-products" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.choccoladd.com" },
+      { "@type": "ListItem", position: 2, name: "All Products", item: "https://www.choccoladd.com/all-products" },
       { "@type": "ListItem", position: 3, name: product.name, item: url },
     ],
   };

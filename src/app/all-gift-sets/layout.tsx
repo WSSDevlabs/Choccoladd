@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   description:
     "Shop Choccoladd's curated chocolate gift sets — perfect for birthdays, weddings, corporate events and celebrations. Handcrafted from premium Malaysian cacao. Order via WhatsApp.",
   alternates: {
-    canonical: "https://choccoladd.com/all-gift-sets",
+    canonical: "https://www.choccoladd.com/all-gift-sets",
   },
   openGraph: {
     title: "Chocolate Gift Sets | Choccoladd",
     description:
       "Curated chocolate gift sets for every occasion — birthdays, weddings, corporate events. Handcrafted from premium Malaysian cacao.",
-    url: "https://choccoladd.com/all-gift-sets",
+    url: "https://www.choccoladd.com/all-gift-sets",
     images: [
       {
         url: "/images/gift-sets/cocoa-grand-gift-set.jpg",
@@ -44,14 +44,14 @@ const giftSetListSchema = {
       "@type": "Product",
       name: set.name,
       description: set.description,
-      image: `https://choccoladd.com${set.image}`,
+      image: `https://www.choccoladd.com${set.image}`,
       brand: { "@type": "Brand", name: "Choccoladd" },
       offers: {
         "@type": "Offer",
         priceCurrency: "MYR",
         price: parsePriceValue(set.price),
         availability: "https://schema.org/InStock",
-        url: "https://choccoladd.com/all-gift-sets",
+        url: "https://www.choccoladd.com/all-gift-sets",
       },
     },
   })),

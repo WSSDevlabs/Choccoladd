@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/"],
     },
-    sitemap: "https://choccoladd.com/sitemap.xml",
-    host: "https://choccoladd.com",
+    sitemap: "https://www.choccoladd.com/sitemap.xml",
+    host: "https://www.choccoladd.com",
   };
 }

@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   description:
     "Browse Choccoladd's full collection of handcrafted Malaysian cocoa chocolates — pralines, panning chocolates, keto chocolates, wellness cocoa drinks and more. Order via WhatsApp.",
   alternates: {
-    canonical: "https://choccoladd.com/all-products",
+    canonical: "https://www.choccoladd.com/all-products",
   },
   openGraph: {
     title: "All Products | Choccoladd",
     description:
       "Browse our full collection of handcrafted Malaysian cocoa chocolates — pralines, keto chocolates, wellness drinks and more.",
-    url: "https://choccoladd.com/all-products",
+    url: "https://www.choccoladd.com/all-products",
     images: [
       {
         url: "/images/products/Praline-chocolate-80.jpg",
@@ -44,14 +44,14 @@ const productListSchema = {
       "@type": "Product",
       name: p.name,
       description: p.description,
-      image: `https://choccoladd.com${p.image}`,
+      image: `https://www.choccoladd.com${p.image}`,
       brand: { "@type": "Brand", name: "Choccoladd" },
       offers: {
         "@type": "Offer",
         priceCurrency: "MYR",
         price: parsePriceValue(p.price),
         availability: "https://schema.org/InStock",
-        url: "https://choccoladd.com/all-products",
+        url: "https://www.choccoladd.com/all-products",
       },
     },
   })),

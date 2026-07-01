@@ -5,7 +5,7 @@ import { nonFoodProducts } from "./components/non-food-data";
 import { slugify } from "./components/slug";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://choccoladd.com";
+  const base = "https://www.choccoladd.com";
   const now = new Date();
 
   return [

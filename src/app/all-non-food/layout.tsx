@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   description:
     "Discover Choccoladd's cocoa-based wellness and skincare products — harnessing the natural power of Malaysian cacao for your health and beauty routine.",
   alternates: {
-    canonical: "https://choccoladd.com/all-non-food",
+    canonical: "https://www.choccoladd.com/all-non-food",
   },
   openGraph: {
     title: "Cocoa Wellness & Skincare | Choccoladd",
     description:
       "Cocoa-based wellness and skincare products harnessing the natural power of authentic Malaysian cacao.",
-    url: "https://choccoladd.com/all-non-food",
+    url: "https://www.choccoladd.com/all-non-food",
     images: [
       {
         url: "/images/NonFood/cocoa-skincare-set.jpg",
@@ -44,14 +44,14 @@ const nonFoodListSchema = {
       "@type": "Product",
       name: p.name,
       description: p.description,
-      image: `https://choccoladd.com${p.image}`,
+      image: `https://www.choccoladd.com${p.image}`,
       brand: { "@type": "Brand", name: "Choccoladd" },
       offers: {
         "@type": "Offer",
         priceCurrency: "MYR",
         price: parsePriceValue(p.price),
         availability: "https://schema.org/InStock",
-        url: "https://choccoladd.com/all-non-food",
+        url: "https://www.choccoladd.com/all-non-food",
       },
     },
   })),
