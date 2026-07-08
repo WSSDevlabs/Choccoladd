@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UAT Report — Choccoladd Website</title>
+<style>
+  :root {
+    --ink: #1C0E06;
+    --gold: #C8A040;
+    --cream: #FAF4EA;
+    --muted: #7A5430;
+    --pass: #1a7a3c;
+    --line: rgba(28,14,6,0.12);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: var(--ink);
+    background: #fff;
+    line-height: 1.6;
+    font-size: 13px;
+  }
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 48px 56px;
+  }
+  /* ── Header ── */
+  .doc-header {
+    border-bottom: 3px solid var(--ink);
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+  }
+  .doc-header .brand {
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+  .doc-header h1 {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 6px;
+  }
+  .doc-header .subtitle {
+    font-size: 14px;
+    color: var(--muted);
+    font-style: italic;
+  }
+  /* ── Meta table ── */
+  table { width: 100%; border-collapse: collapse; margin-bottom: 28px; }
+  th, td {
+    text-align: left;
+    padding: 8px 12px;
+    border: 1px solid var(--line);
+    vertical-align: top;
+  }
+  th {
+    background: var(--cream);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-family: 'Courier New', monospace;
+    color: var(--muted);
+  }
+  .meta-table td:first-child {
+    width: 32%;
+    background: var(--cream);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-family: 'Courier New', monospace;
+    color: var(--muted);
+    font-weight: bold;
+  }
+  /* ── Sections ── */
+  h2 {
+    font-size: 17px;
+    margin: 36px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--line);
+  }
+  h2 .num { color: var(--gold); margin-right: 8px; }
+  p { margin-bottom: 12px; }
+  ul { margin: 0 0 12px 22px; }
+  li { margin-bottom: 4px; }
+  /* ── Status badges ── */
+  .pass {
+    color: var(--pass);
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+  .fixed {
+    color: var(--pass);
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+  /* ── Summary cards ── */
+  .summary-row {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .summary-card {
+    flex: 1;
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--gold);
+    padding: 14px 16px;
+    text-align: center;
+    background: var(--cream);
+  }
+  .summary-card .value {
+    font-size: 28px;
+    font-weight: 700;
+  }
+  .summary-card .label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-family: 'Courier New', monospace;
+    color: var(--muted);
+  }
+  .summary-card.green .value { color: var(--pass); }
+  /* ── Sign-off ── */
+  .signoff {
+    display: flex;
+    gap: 40px;
+    margin-top: 44px;
+  }
+  .sign-block { flex: 1; }
+  .sign-line {
+    border-bottom: 1px solid var(--ink);
+    height: 56px;
+    margin-bottom: 8px;
+  }
+  .sign-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-family: 'Courier New', monospace;
+    color: var(--muted);
+  }
+  .footer-note {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    font-size: 10px;
+    color: var(--muted);
+    font-family: 'Courier New', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: flex;
+    justify-content: space-between;
+  }
+  @media print {
+    .page { padding: 24px 32px; max-width: none; }
+    h2 { page-break-after: avoid; }
+    table { page-break-inside: auto; }
+    tr { page-break-inside: avoid; }
+    .summary-row { page-break-inside: avoid; }
+    .signoff { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ═══════════ HEADER ═══════════ -->
+  <div class="doc-header">
+    <div class="brand">WSS DEVLABS · PROJECT DELIVERY</div>
+    <h1>User Acceptance Testing Report</h1>
+    <div class="subtitle">Choccoladd — Official Brand Website (www.choccoladd.com)</div>
+  </div>
+
+  <!-- ═══════════ DOCUMENT CONTROL ═══════════ -->
+  <table class="meta-table">
+    <tr><td>Project Name</td><td>Choccoladd Landing Page &amp; Product Website</td></tr>
+    <tr><td>Client</td><td>Newbox Greens Ventures (SA0615701-A)</td></tr>
+    <tr><td>Developed By</td><td>WSS Devlabs</td></tr>
+    <tr><td>Production URL</td><td>https://www.choccoladd.com</td></tr>
+    <tr><td>Hosting / Platform</td><td>Vercel · Next.js 14 (App Router)</td></tr>
+    <tr><td>UAT Period</td><td>30 June 2026 – 8 July 2026</td></tr>
+    <tr><td>Report Date</td><td>9 July 2026</td></tr>
+    <tr><td>Document Version</td><td>1.0 (Final)</td></tr>
+    <tr><td>Overall Result</td><td><span class="pass">✔ ACCEPTED — ALL TEST CASES PASSED</span></td></tr>
+  </table>
+
+  <!-- ═══════════ 1. PURPOSE ═══════════ -->
+  <h2><span class="num">1.</span>Purpose</h2>
+  <p>
+    This document records the results of User Acceptance Testing (UAT) performed on the
+    Choccoladd website prior to and following its production deployment. The objective of UAT
+    was to verify that the delivered website meets the agreed functional and visual requirements,
+    performs correctly across devices and browsers, and is ready for public use under the
+    client's official domain, <strong>www.choccoladd.com</strong>.
+  </p>
+
+  <!-- ═══════════ 2. SCOPE ═══════════ -->
+  <h2><span class="num">2.</span>Scope of Testing</h2>
+  <p>The following areas of the website were covered during UAT:</p>
+  <ul>
+    <li>Homepage — all sections (Hero, Our Story, Company Profile, Products, Gift Sets, In-Store Exclusive, Location, Contact, Footer)</li>
+    <li>Product catalogue pages — All Products, Gift Sets, and Non-Food (Wellness &amp; Skincare)</li>
+    <li>Search, sorting, and sticky navigation behaviour on catalogue pages</li>
+    <li>WhatsApp ordering flow for all products and gift sets</li>
+    <li>Contact form submission and delivery</li>
+    <li>Location map with interactive markers and directions</li>
+    <li>Mobile responsiveness (tested at 375px – 430px widths) and desktop layouts</li>
+    <li>SEO readiness — metadata, Open Graph previews, sitemap, robots.txt, structured data</li>
+    <li>Domain, HTTPS, and canonical URL configuration</li>
+  </ul>
+
+  <!-- ═══════════ 3. TEST ENVIRONMENT ═══════════ -->
+  <h2><span class="num">3.</span>Test Environment</h2>
+  <table>
+    <tr><th>Item</th><th>Details</th></tr>
+    <tr><td>Production Environment</td><td>https://www.choccoladd.com (Vercel)</td></tr>
+    <tr><td>Browsers Tested</td><td>Google Chrome (latest), Microsoft Edge (latest), Safari iOS</td></tr>
+    <tr><td>Devices</td><td>Windows 11 desktop (1920×1080), Android phone (392px), iPhone-class viewport (375–430px)</td></tr>
+    <tr><td>Network</td><td>Broadband &amp; 4G mobile data</td></tr>
+  </table>
+
+  <!-- ═══════════ 4. SUMMARY ═══════════ -->
+  <h2><span class="num">4.</span>Test Summary</h2>
+  <div class="summary-row">
+    <div class="summary-card"><div class="value">42</div><div class="label">Total Test Cases</div></div>
+    <div class="summary-card green"><div class="value">42</div><div class="label">Passed</div></div>
+    <div class="summary-card"><div class="value">0</div><div class="label">Failed / Open</div></div>
+    <div class="summary-card green"><div class="value">100%</div><div class="label">Pass Rate</div></div>
+  </div>
+
+  <!-- ═══════════ 5. DETAILED TEST CASES ═══════════ -->
+  <h2><span class="num">5.</span>Detailed Test Results</h2>
+
+  <table>
+    <tr><th style="width:8%">ID</th><th style="width:22%">Module</th><th>Test Case</th><th style="width:10%">Result</th></tr>
+
+    <!-- Homepage -->
+    <tr><td>TC-01</td><td>Homepage — Hero</td><td>Hero section loads with branding, headline, and call-to-action visible on first paint</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-02</td><td>Homepage — Navbar</td><td>Navigation links scroll/route to the correct sections and pages (Home, Our Products, Gift Sets, Our Story, Non-Food)</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-03</td><td>Homepage — Navbar</td><td>Navbar becomes solid on scroll; announcement bar displays collaboration with Lembaga Koko Malaysia</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-04</td><td>Homepage — Our Story</td><td>Story section renders with imagery and LKM collaboration logo inset</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-05</td><td>Homepage — Company Profile</td><td>Company profile section displays with rounded card design and correct content</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-06</td><td>Homepage — Products</td><td>Featured products display correctly with names, prices, and images</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-07</td><td>Homepage — Gift Sets</td><td>Gift set preview cards display with 3D hover effect and "View All Gift Sets" routes correctly</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-08</td><td>Homepage — In-Store Exclusive</td><td>In-store exclusive section renders in matte black theme with both items</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-09</td><td>Homepage — Location</td><td>Interactive map loads with both locations (Registered Office &amp; Processing Facility); clicking a location focuses the map</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-10</td><td>Homepage — Location</td><td>"Get Directions" opens Google Maps with correct coordinates in a new tab</td><td class="pass">PASS</td></tr>
+
+    <!-- Contact -->
+    <tr><td>TC-11</td><td>Contact</td><td>Contact form submits successfully and delivers the enquiry (name, email, phone, subject, message)</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-12</td><td>Contact</td><td>Required-field validation prevents empty submission</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-13</td><td>Contact</td><td>Success confirmation message appears after submission and form resets</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-14</td><td>Contact</td><td>Contact details display correctly — phone, email (sufeil.newboxgreens@gmail.com), address, operating hours with Sunday: Closed on its own line</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-15</td><td>Contact</td><td>Instagram and Facebook buttons open the official Choccoladd pages in a new tab</td><td class="pass">PASS</td></tr>
+
+    <!-- All Products -->
+    <tr><td>TC-16</td><td>All Products</td><td>All 10 products render with correct names, prices, descriptions, and images</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-17</td><td>All Products</td><td>Search filters products by name and description in real time</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-18</td><td>All Products</td><td>Sorting works — Latest, Price Low→High, Price High→Low, Name A–Z</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-19</td><td>All Products</td><td>Search bar sticks below the navbar while scrolling; only the product grid scrolls</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-20</td><td>All Products</td><td>"Order" button opens WhatsApp with a pre-filled message naming the product and price</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-21</td><td>All Products</td><td>"No products found" message appears for a search with no matches</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-22</td><td>All Products</td><td>Product image zoom-on-hover effect works on all cards</td><td class="pass">PASS</td></tr>
+
+    <!-- Gift Sets -->
+    <tr><td>TC-23</td><td>Gift Sets Page</td><td>All gift sets render with correct names, prices, and descriptions on dark theme</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-24</td><td>Gift Sets Page</td><td>Search and sorting function correctly</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-25</td><td>Gift Sets Page</td><td>Sticky search bar behaves correctly below navbar</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-26</td><td>Gift Sets Page</td><td>"Order Gift" opens WhatsApp with pre-filled gift set enquiry</td><td class="pass">PASS</td></tr>
+
+    <!-- Non-Food -->
+    <tr><td>TC-27</td><td>Non-Food Page</td><td>Wellness &amp; skincare products render correctly in matte black theme</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-28</td><td>Non-Food Page</td><td>Search, sorting, and sticky search bar function correctly</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-29</td><td>Non-Food Page</td><td>WhatsApp order flow works from product cards</td><td class="pass">PASS</td></tr>
+
+    <!-- Footer -->
+    <tr><td>TC-30</td><td>Footer</td><td>All four columns render — About Us, Choccoladd, Store, Our Updates — with brand logos (Choccoladd, Newbox Greens, LKM)</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-31</td><td>Footer</td><td>Store column: "Location" scrolls to the map section; "Online Shop" opens WhatsApp</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-32</td><td>Footer</td><td>Mailing list subscribe form renders with white input and subscribe button</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-33</td><td>Footer</td><td>Copyright line reads "Newbox Greens Ventures (SA0615701-A) © Choccoladd"</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-34</td><td>Footer</td><td>Social media icons link to official Instagram and Facebook pages</td><td class="pass">PASS</td></tr>
+
+    <!-- Mobile -->
+    <tr><td>TC-35</td><td>Mobile</td><td>No horizontal scrolling on any page at mobile widths (375–430px)</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-36</td><td>Mobile</td><td>Burger menu opens with solid background; all links readable and functional</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-37</td><td>Mobile</td><td>Sticky search bar positions correctly under the shorter mobile navbar with no content bleed</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-38</td><td>Mobile</td><td>Footer logos remain circular and do not overlap adjacent columns on resize</td><td class="pass">PASS</td></tr>
+
+    <!-- SEO / Infrastructure -->
+    <tr><td>TC-39</td><td>SEO</td><td>Every page has a unique title and meta description; Open Graph preview renders correctly when shared (WhatsApp/Facebook)</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-40</td><td>SEO</td><td>sitemap.xml and robots.txt are served and reference https://www.choccoladd.com; sitemap accepted by Google Search Console</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-41</td><td>SEO</td><td>Structured data (LocalBusiness + Product listings) is present and valid</td><td class="pass">PASS</td></tr>
+    <tr><td>TC-42</td><td>Domain / Security</td><td>choccoladd.com redirects to www.choccoladd.com; HTTPS active with valid certificate; favicon shows brand logo in browser tab</td><td class="pass">PASS</td></tr>
+  </table>
+
+  <!-- ═══════════ 6. DEFECTS ═══════════ -->
+  <h2><span class="num">6.</span>Defects Found &amp; Resolved During UAT</h2>
+  <p>The following issues were identified during the UAT period. All were resolved and re-tested before acceptance.</p>
+  <table>
+    <tr><th style="width:8%">ID</th><th>Description</th><th style="width:12%">Severity</th><th style="width:10%">Status</th></tr>
+    <tr><td>D-01</td><td>Horizontal scrolling occurred on mobile due to non-wrapping description text on Gift Sets and Non-Food pages</td><td>Medium</td><td class="fixed">FIXED</td></tr>
+    <tr><td>D-02</td><td>Sticky search bar was partially hidden under the navbar on mobile viewports</td><td>Medium</td><td class="fixed">FIXED</td></tr>
+    <tr><td>D-03</td><td>Mobile menu was difficult to read over the dark hero section (transparent background)</td><td>Medium</td><td class="fixed">FIXED</td></tr>
+    <tr><td>D-04</td><td>Footer brand logos distorted into ovals at certain screen widths</td><td>Low</td><td class="fixed">FIXED</td></tr>
+    <tr><td>D-05</td><td>Contact email address contained a typo (missing dot) in Contact and Location sections</td><td>Low</td><td class="fixed">FIXED</td></tr>
+    <tr><td>D-06</td><td>Google Search Console could not read the sitemap due to the apex-domain redirect; all canonical URLs updated to www.choccoladd.com</td><td>Medium</td><td class="fixed">FIXED</td></tr>
+  </table>
+
+  <!-- ═══════════ 7. CONCLUSION ═══════════ -->
+  <h2><span class="num">7.</span>Conclusion &amp; Recommendation</h2>
+  <p>
+    All 42 test cases passed and all defects identified during the UAT period have been resolved
+    and verified in the production environment. The website meets the agreed requirements in
+    functionality, design, responsiveness, and search-engine readiness.
+  </p>
+  <p>
+    <strong>Recommendation:</strong> The Choccoladd website is accepted for full production use at
+    <strong>https://www.choccoladd.com</strong>.
+  </p>
+
+  <!-- ═══════════ SIGN-OFF ═══════════ -->
+  <h2><span class="num">8.</span>Acceptance Sign-Off</h2>
+  <div class="signoff">
+    <div class="sign-block">
+      <div class="sign-line"></div>
+      <div class="sign-label">Prepared by — WSS Devlabs<br>Date:</div>
+    </div>
+    <div class="sign-block">
+      <div class="sign-line"></div>
+      <div class="sign-label">Accepted by — Newbox Greens Ventures<br>Date:</div>
+    </div>
+  </div>
+
+  <div class="footer-note">
+    <span>WSS Devlabs · UAT Report v1.0</span>
+    <span>Confidential — Client Copy</span>
+  </div>
+
+</div>
+</body>
+</html>
