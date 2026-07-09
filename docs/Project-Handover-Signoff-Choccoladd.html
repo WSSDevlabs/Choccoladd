@@ -87,6 +87,15 @@
   }
   h2 .num { color: var(--gold); margin-right: 8px; }
   h3 { font-size: 14px; margin: 18px 0 8px; }
+  code {
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    background: var(--cream);
+    border: 1px solid var(--line);
+    padding: 1px 5px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
   p { margin-bottom: 12px; }
   ul { margin: 0 0 12px 22px; }
   li { margin-bottom: 4px; }
@@ -264,8 +273,47 @@
     Note: the website has no recurring third-party costs beyond the annual domain renewal.
   </p>
 
-  <!-- ═══════════ 6. POST-HANDOVER NOTES ═══════════ -->
-  <h2><span class="num">6.</span>Post-Handover Recommendations</h2>
+  <!-- ═══════════ 6. CODE & INTEGRATIONS ═══════════ -->
+  <h2><span class="num">6.</span>Code Repository &amp; Integration Reference</h2>
+
+  <h3>6.1 Source Code Location</h3>
+  <p>
+    The complete source code is stored in the client's GitHub repository:
+    <strong>github.com/choccoladd/LandingPage</strong>. Vercel is connected to this repository —
+    any update pushed to the <strong>main</strong> branch is automatically built and deployed to
+    <strong>www.choccoladd.com</strong> within minutes, with no manual deployment steps required.
+  </p>
+
+  <h3>6.2 Project Structure</h3>
+  <table>
+    <tr><th style="width:42%">Location</th><th>Contents</th></tr>
+    <tr><td><code>src/app/</code></td><td>Main application — homepage (<code>App.tsx</code>), layout, SEO configuration (<code>layout.tsx</code>, <code>sitemap.ts</code>, <code>robots.ts</code>)</td></tr>
+    <tr><td><code>src/app/components/</code></td><td>All page sections — Navbar, Hero, Story, Company Profile, Products, Gift Sets, In-Store Exclusive, Location Map, Contact, Footer</td></tr>
+    <tr><td><code>src/app/components/products-data.ts</code></td><td><strong>Product catalogue data</strong> — names, prices, descriptions, images, tags. Edit this file to update products</td></tr>
+    <tr><td><code>src/app/components/gift-sets-data.ts</code></td><td><strong>Gift set catalogue data</strong> — same format as products</td></tr>
+    <tr><td><code>src/app/components/non-food-data.ts</code></td><td><strong>Non-food (wellness &amp; skincare) catalogue data</strong></td></tr>
+    <tr><td><code>src/app/all-products/</code>, <code>all-gift-sets/</code>, <code>all-non-food/</code></td><td>The three catalogue pages with their individual SEO metadata</td></tr>
+    <tr><td><code>public/images/</code></td><td>All website imagery — product photos, logos, general images, organised by folder</td></tr>
+  </table>
+
+  <h3>6.3 Integrations &amp; Where They Are Configured</h3>
+  <table>
+    <tr><th style="width:24%">Integration</th><th>Purpose</th><th style="width:38%">Configured In</th></tr>
+    <tr><td>WhatsApp Business</td><td>All "Order" buttons open WhatsApp chat to <strong>+60 19-631 9373</strong> with a pre-filled message</td><td><code>ProductCard</code> / <code>GiftSetCard</code> components and Footer (search for <code>wa.me/60196319373</code> to change the number)</td></tr>
+    <tr><td>Web3Forms</td><td>Contact form delivery to the client's email inbox</td><td><code>src/app/components/Contact.tsx</code> — <code>access_key</code> value (tied to the client's email account at web3forms.com)</td></tr>
+    <tr><td>Leaflet / OpenStreetMap</td><td>Interactive location map — free, no API key needed</td><td><code>src/app/components/LocationMap.tsx</code> — addresses, coordinates, and location details</td></tr>
+    <tr><td>Vercel</td><td>Hosting, HTTPS, global CDN, automatic deployment from GitHub</td><td>Vercel dashboard — project linked to <code>choccoladd/LandingPage</code>, domain settings under Project → Settings → Domains</td></tr>
+    <tr><td>Google Search Console</td><td>Search indexing and performance monitoring</td><td>search.google.com/search-console — property <code>www.choccoladd.com</code>, sitemap submitted at <code>/sitemap.xml</code></td></tr>
+    <tr><td>Instagram / Facebook</td><td>Social media buttons on Contact section and Footer</td><td><code>Contact.tsx</code> and <code>Footer.tsx</code> — official page URLs</td></tr>
+  </table>
+  <p style="font-size:12px; color:var(--muted);">
+    Common updates at a glance: change a price or product → edit the data file in 6.2; change the
+    WhatsApp number → search for <code>60196319373</code> across the project; change the contact
+    email destination → update the Web3Forms access key in <code>Contact.tsx</code>.
+  </p>
+
+  <!-- ═══════════ 7. POST-HANDOVER NOTES ═══════════ -->
+  <h2><span class="num">7.</span>Post-Handover Recommendations</h2>
   <ul>
     <li><strong>Content updates</strong> — product names, prices, descriptions, and images are managed in the site's data files; contact WSS Devlabs or any developer for updates.</li>
     <li><strong>Domain renewal</strong> — keep choccoladd.com renewed with the registrar to avoid downtime.</li>
@@ -274,7 +322,7 @@
   </ul>
 
   <!-- ═══════════ 7. DECLARATION ═══════════ -->
-  <h2><span class="num">7.</span>Acceptance Declaration</h2>
+  <h2><span class="num">8.</span>Acceptance Declaration</h2>
   <div class="declaration">
     <p>
       By signing below, the Client acknowledges that all deliverables listed in this document have
