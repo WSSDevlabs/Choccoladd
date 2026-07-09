@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Deliverables & Handover Sign-Off — Choccoladd Website</title>
+<style>
+  :root {
+    --ink: #1C0E06;
+    --gold: #C8A040;
+    --cream: #FAF4EA;
+    --muted: #7A5430;
+    --pass: #1a7a3c;
+    --line: rgba(28,14,6,0.12);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: var(--ink);
+    background: #fff;
+    line-height: 1.6;
+    font-size: 13px;
+  }
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 48px 56px;
+  }
+  /* ── Header ── */
+  .doc-header {
+    border-bottom: 3px solid var(--ink);
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+  }
+  .doc-header .brand {
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+  .doc-header h1 {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 6px;
+  }
+  .doc-header .subtitle {
+    font-size: 14px;
+    color: var(--muted);
+    font-style: italic;
+  }
+  /* ── Tables ── */
+  table { width: 100%; border-collapse: collapse; margin-bottom: 28px; }
+  th, td {
+    text-align: left;
+    padding: 8px 12px;
+    border: 1px solid var(--line);
+    vertical-align: top;
+  }
+  th {
+    background: var(--cream);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-family: 'Courier New', monospace;
+    color: var(--muted);
+  }
+  .meta-table td:first-child {
+    width: 32%;
+    background: var(--cream);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-family: 'Courier New', monospace;
+    color: var(--muted);
+    font-weight: bold;
+  }
+  /* ── Sections ── */
+  h2 {
+    font-size: 17px;
+    margin: 36px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--line);
+  }
+  h2 .num { color: var(--gold); margin-right: 8px; }
+  h3 { font-size: 14px; margin: 18px 0 8px; }
+  p { margin-bottom: 12px; }
+  ul { margin: 0 0 12px 22px; }
+  li { margin-bottom: 4px; }
+  /* ── Status badges ── */
+  .delivered {
+    color: var(--pass);
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+  .owner {
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+  /* ── Declaration box ── */
+  .declaration {
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--gold);
+    background: var(--cream);
+    padding: 18px 22px;
+    margin: 20px 0 28px;
+  }
+  .declaration p:last-child { margin-bottom: 0; }
+  /* ── Sign-off ── */
+  .signoff {
+    display: flex;
+    gap: 40px;
+    margin-top: 44px;
+  }
+  .sign-block { flex: 1; }
+  .sign-line {
+    border-bottom: 1px solid var(--ink);
+    height: 56px;
+    margin-bottom: 8px;
+  }
+  .sign-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-family: 'Courier New', monospace;
+    color: var(--muted);
+  }
+  .footer-note {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    font-size: 10px;
+    color: var(--muted);
+    font-family: 'Courier New', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: flex;
+    justify-content: space-between;
+  }
+  @media print {
+    .page { padding: 24px 32px; max-width: none; }
+    h2 { page-break-after: avoid; }
+    table { page-break-inside: auto; }
+    tr { page-break-inside: avoid; }
+    .declaration { page-break-inside: avoid; }
+    .signoff { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ═══════════ HEADER ═══════════ -->
+  <div class="doc-header">
+    <div class="brand">WSS DEVLABS · PROJECT DELIVERY</div>
+    <h1>Project Deliverables &amp; Handover Sign-Off</h1>
+    <div class="subtitle">Choccoladd — Official Brand Website (www.choccoladd.com)</div>
+  </div>
+
+  <!-- ═══════════ DOCUMENT CONTROL ═══════════ -->
+  <table class="meta-table">
+    <tr><td>Project Name</td><td>Choccoladd Landing Page &amp; Product Website</td></tr>
+    <tr><td>Client</td><td>Newbox Greens Ventures (SA0615701-A)</td></tr>
+    <tr><td>Developed By</td><td>WSS Devlabs</td></tr>
+    <tr><td>Production URL</td><td>https://www.choccoladd.com</td></tr>
+    <tr><td>Handover Date</td><td>9 July 2026</td></tr>
+    <tr><td>Document Version</td><td>1.0 (Final)</td></tr>
+    <tr><td>Related Documents</td><td>UAT Report v1.0 (dated 9 July 2026 — all 42 test cases passed)</td></tr>
+    <tr><td>Project Status</td><td><span class="delivered">✔ COMPLETED — DELIVERED TO PRODUCTION</span></td></tr>
+  </table>
+
+  <!-- ═══════════ 1. PURPOSE ═══════════ -->
+  <h2><span class="num">1.</span>Purpose</h2>
+  <p>
+    This document formally records the completion and handover of the Choccoladd website project
+    from WSS Devlabs to Newbox Greens Ventures. It lists all deliverables provided, the assets and
+    accounts transferred to the client's ownership, and serves as the formal project sign-off.
+    Upon signature by both parties, the project is considered complete and accepted.
+  </p>
+
+  <!-- ═══════════ 2. PROJECT OVERVIEW ═══════════ -->
+  <h2><span class="num">2.</span>Project Overview</h2>
+  <p>
+    WSS Devlabs was engaged to design, develop, and deploy the official brand website for
+    Choccoladd — a premium Malaysian cocoa chocolate brand by Newbox Greens Ventures, in
+    collaboration with Lembaga Koko Malaysia. The website showcases the full product range,
+    enables direct customer ordering via WhatsApp, and provides company, location, and contact
+    information, with full search-engine readiness for the brand's official domain.
+  </p>
+
+  <!-- ═══════════ 3. DELIVERABLES ═══════════ -->
+  <h2><span class="num">3.</span>Deliverables</h2>
+
+  <h3>3.1 Website Pages</h3>
+  <table>
+    <tr><th style="width:8%">#</th><th style="width:30%">Deliverable</th><th>Description</th><th style="width:12%">Status</th></tr>
+    <tr><td>P-01</td><td>Homepage</td><td>Hero, Our Story, Company Profile, Featured Products, Gift Sets preview, In-Store Exclusive, Locations map, Contact form, Footer</td><td class="delivered">DELIVERED</td></tr>
+    <tr><td>P-02</td><td>All Products page</td><td>Full catalogue (10 products) with live search, 4 sorting options, sticky search bar, WhatsApp ordering</td><td class="delivered">DELIVERED</td></tr>
+    <tr><td>P-03</td><td>Gift Sets page</td><td>Full gift set catalogue with search, sorting, and WhatsApp ordering — premium dark theme</td><td class="delivered">DELIVERED</td></tr>
+    <tr><td>P-04</td><td>Non-Food page</td><td>Cocoa wellness &amp; skincare catalogue — matte black theme with search, sorting, and WhatsApp ordering</td><td class="delivered">DELIVERED</td></tr>
+  </table>
+
+  <h3>3.2 Features &amp; Functionality</h3>
+  <table>
+    <tr><th style="width:8%">#</th><th style="width:30%">Deliverable</th><th>Description</th><th style="width:12%">Status</th></tr>
+    <tr><td>F-01</td><td>WhatsApp ordering</td><td>Every product, gift set, and non-food item opens WhatsApp with a pre-filled order message to the business number</td><td class="delivered">DELIVERED</td></tr>
+    <tr><td>F-02</td><td>Contact form</td><td>Working enquiry form delivering submissions to the client's email (Web3Forms integration)</td><td class="delivered">DELIVERED</td></tr>
+    <tr><td>F-03</td><td>Interactive location map</td><td>Two locations (Registered Office &amp; Processing Facility) with map markers and Google Maps directions</td><td class="delivered">DELIVERED</td></tr>
+    <tr><td>F-04</td><td>Mailing list form</td><td>Subscribe form in the footer for customer updates</td><td class="delivered">DELIVERED</td></tr>
+    <tr><td>F-05</td><td>Responsive design</td><td>Fully responsive layouts for mobile (375px+), tablet, and desktop; mobile navigation menu</td><td class="delivered">DELIVERED</td></tr>
+    <tr><td>F-06</td><td>Brand animations</td><td>Scroll-reveal animations, product image hover zoom, 3D card tilt on gift sets</td><td class="delivered">DELIVERED</td></tr>
+    <tr><td>F-07</td><td>Social media integration</td><td>Instagram and Facebook links in Contact section and Footer to the official brand pages</td><td class="delivered">DELIVERED</td></tr>
+  </table>
+
+  <h3>3.3 SEO &amp; Infrastructure</h3>
+  <table>
+    <tr><th style="width:8%">#</th><th style="width:30%">Deliverable</th><th>Description</th><th style="width:12%">Status</th></tr>
+    <tr><td>S-01</td><td>On-page SEO</td><td>Unique titles, meta descriptions, and keywords for every page; descriptive image alt text throughout</td><td class="delivered">DELIVERED</td></tr>
+    <tr><td>S-02</td><td>Social sharing (Open Graph)</td><td>Link previews with image, title, and description when shared on WhatsApp, Facebook, and other platforms</td><td class="delivered">DELIVERED</td></tr>
+    <tr><td>S-03</td><td>Sitemap &amp; robots.txt</td><td>Auto-generated sitemap.xml (all pages + product URLs) and robots.txt, registered with Google Search Console</td><td class="delivered">DELIVERED</td></tr>
+    <tr><td>S-04</td><td>Structured data</td><td>LocalBusiness schema (name, address, hours, contact) and Product listing schema for Google rich results</td><td class="delivered">DELIVERED</td></tr>
+    <tr><td>S-05</td><td>Domain &amp; hosting</td><td>choccoladd.com connected to Vercel hosting; canonical domain www.choccoladd.com; HTTPS certificate active</td><td class="delivered">DELIVERED</td></tr>
+    <tr><td>S-06</td><td>Brand favicon</td><td>Choccoladd logo as browser tab icon across all pages</td><td class="delivered">DELIVERED</td></tr>
+  </table>
+
+  <h3>3.4 Documentation</h3>
+  <table>
+    <tr><th style="width:8%">#</th><th style="width:30%">Deliverable</th><th>Description</th><th style="width:12%">Status</th></tr>
+    <tr><td>D-01</td><td>UAT Report v1.0</td><td>Full User Acceptance Testing report — 42 test cases, 100% pass rate, all defects resolved</td><td class="delivered">DELIVERED</td></tr>
+    <tr><td>D-02</td><td>Handover &amp; Sign-Off document</td><td>This document</td><td class="delivered">DELIVERED</td></tr>
+  </table>
+
+  <!-- ═══════════ 4. HANDOVER OF ASSETS ═══════════ -->
+  <h2><span class="num">4.</span>Assets &amp; Ownership Transferred</h2>
+  <p>The following assets are in the client's ownership or control as of the handover date:</p>
+  <table>
+    <tr><th style="width:28%">Asset</th><th>Details</th><th style="width:18%">Ownership</th></tr>
+    <tr><td>Source code repository</td><td>GitHub — choccoladd/LandingPage (complete, deployable source code)</td><td class="owner">CLIENT</td></tr>
+    <tr><td>Hosting &amp; deployment</td><td>Vercel project connected to the client's GitHub repository; automatic deployment on update</td><td class="owner">CLIENT</td></tr>
+    <tr><td>Domain</td><td>choccoladd.com — registered and managed under the client's Hostinger account</td><td class="owner">CLIENT</td></tr>
+    <tr><td>Contact form service</td><td>Web3Forms access key configured to deliver enquiries to the client's email address</td><td class="owner">CLIENT</td></tr>
+    <tr><td>Google Search Console</td><td>Property for www.choccoladd.com with sitemap submitted and accepted</td><td class="owner">CLIENT</td></tr>
+    <tr><td>Brand imagery &amp; content</td><td>All product photography, logos, and copy as provided by the client and deployed on the site</td><td class="owner">CLIENT</td></tr>
+  </table>
+
+  <!-- ═══════════ 5. TECHNOLOGY STACK ═══════════ -->
+  <h2><span class="num">5.</span>Technology Summary</h2>
+  <table>
+    <tr><th style="width:32%">Component</th><th>Technology</th></tr>
+    <tr><td>Framework</td><td>Next.js 14 (App Router) with TypeScript</td></tr>
+    <tr><td>Styling</td><td>Tailwind CSS with custom brand design system</td></tr>
+    <tr><td>Animations</td><td>Motion (Framer Motion)</td></tr>
+    <tr><td>Maps</td><td>Leaflet (OpenStreetMap) — no API fees</td></tr>
+    <tr><td>Contact form</td><td>Web3Forms — no server required, free tier</td></tr>
+    <tr><td>Hosting</td><td>Vercel — automatic HTTPS, global CDN, free tier</td></tr>
+  </table>
+  <p style="font-size:12px; color:var(--muted);">
+    Note: the website has no recurring third-party costs beyond the annual domain renewal.
+  </p>
+
+  <!-- ═══════════ 6. POST-HANDOVER NOTES ═══════════ -->
+  <h2><span class="num">6.</span>Post-Handover Recommendations</h2>
+  <ul>
+    <li><strong>Content updates</strong> — product names, prices, descriptions, and images are managed in the site's data files; contact WSS Devlabs or any developer for updates.</li>
+    <li><strong>Domain renewal</strong> — keep choccoladd.com renewed with the registrar to avoid downtime.</li>
+    <li><strong>Google Business Profile</strong> — registering the business on Google Maps is recommended to strengthen local search presence.</li>
+    <li><strong>Search Console</strong> — indexing statistics and search performance can be monitored at search.google.com/search-console.</li>
+  </ul>
+
+  <!-- ═══════════ 7. DECLARATION ═══════════ -->
+  <h2><span class="num">7.</span>Acceptance Declaration</h2>
+  <div class="declaration">
+    <p>
+      By signing below, the Client acknowledges that all deliverables listed in this document have
+      been received, reviewed, and accepted; that User Acceptance Testing has been completed with
+      all test cases passed (UAT Report v1.0); and that the project is considered
+      <strong>complete and formally closed</strong>.
+    </p>
+    <p>
+      The Developer confirms that all listed deliverables have been provided in full working order
+      and that ownership of the assets listed in Section 4 rests with the Client.
+    </p>
+  </div>
+
+  <!-- ═══════════ SIGN-OFF ═══════════ -->
+  <div class="signoff">
+    <div class="sign-block">
+      <div class="sign-line"></div>
+      <div class="sign-label">Handed over by — WSS Devlabs<br>Name:<br>Date:</div>
+    </div>
+    <div class="sign-block">
+      <div class="sign-line"></div>
+      <div class="sign-label">Accepted by — Newbox Greens Ventures<br>Name:<br>Date:</div>
+    </div>
+  </div>
+
+  <div class="footer-note">
+    <span>WSS Devlabs · Handover &amp; Sign-Off v1.0</span>
+    <span>Confidential — Client Copy</span>
+  </div>
+
+</div>
+</body>
+</html>
